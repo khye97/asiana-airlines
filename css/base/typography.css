@@ -1,0 +1,23 @@
+/* 타이틀 폰트 */
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  /* font-family */
+  --title-font: "Paperlogy-8ExtraBold";
+  --body-font: "Noto Sans KR", sans-serif;
+
+  /* font-size */
+  --section-title: 45px;
+  --section-desc: 20px;
+  --font-size-32: 32px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+}
