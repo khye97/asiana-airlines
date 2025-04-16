@@ -15,4 +15,13 @@
   --facebook: #4267b2;
   --youtube: #ff0000;
   --instagram: #8134af;
+
+  /* box-shadow */
+  --shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+  /* padding */
+  --section-padding: 80px;
+
+  /* margin */
+  --section-title-margin: 24px;
 }
