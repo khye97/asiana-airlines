@@ -1,0 +1,18 @@
+:root {
+  /* 컬러 변수 */
+  --body-text: #111111;
+  --gray-text: #898989;
+  --border: #dcdcdc;
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #2e2e7c;
+  --red: #c40b40;
+  --background: #ededed;
+  --background-blue: #eef5ff;
+
+  /* sns */
+  --footer-black: #252523;
+  --facebook: #4267b2;
+  --youtube: #ff0000;
+  --instagram: #8134af;
+}
