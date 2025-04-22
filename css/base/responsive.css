@@ -1,0 +1,20 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+  /* main-slider -------------------- */
+  .main-slider__content-category {
+    font-size: var(--font-size-16);
+  }
+
+  .main-slider__content-title {
+    font-size: var(--font-size-24);
+  }
+
+  .main-slier__content-desc {
+    font-size: var(--font-size-18);
+  }
+}
