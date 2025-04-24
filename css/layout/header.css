@@ -1,5 +1,6 @@
 .header {
   box-shadow: var(--shadow);
+  height: 114px;
 }
 
 .header__container {
@@ -44,7 +45,7 @@
 .header__nav {
   display: flex;
   align-items: center;
-  padding: 20px 0 10px 0;
+  padding-top: 20px;
 }
 
 .header__logo {
@@ -80,6 +81,7 @@
   opacity: 0;
   transform: translateX(0);
   transition: transform 300ms, opacity 300ms, width 300ms;
+  pointer-events: none;
 }
 
 .header__gnb-list {
@@ -87,6 +89,7 @@
 }
 
 .header__gnb-item {
+  padding-bottom: 10px;
 }
 
 .header__gnb-title-group {
@@ -103,24 +106,30 @@
   padding: 10px 30px;
 }
 
-.header__gnb-title-group:hover + .header__gnb-submenu-group {
-  display: flex;
+.header__gnb-item:hover .center {
+  display: block;
 }
 
-/* submenu */
-.header__gnb-submenu-group {
+.center {
   display: none;
-  justify-content: space-between;
   position: fixed;
-  top: 115px;
+  top: 114px;
   left: 0;
   width: 100%;
+  z-index: 10;
   background-color: var(--white);
-  padding: 20px 252px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
+.header__gnb-submenu-group {
+  display: flex;
+  max-width: 1200px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+/* submenu */
 .header__gnb-submenu {
   border-left: 1px solid var(--border);
   flex-grow: 1;
@@ -181,6 +190,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .header {
+    height: 60px;
+  }
+
   .header__nav {
     position: relative;
     padding: 20px 0;
@@ -250,13 +263,17 @@
     padding-top: 50px;
   }
 
+  .header__gnb-item {
+    padding: 0;
+  }
+
   .header__gnb-title-group {
     display: flex;
     border-bottom: 1px solid var(--border);
     align-items: center;
   }
 
-  .header__gnb-title-group:hover + .header__gnb-submenu-group {
+  .header__gnb-title-group:hover .center {
     display: block;
   }
 
@@ -272,12 +289,15 @@
     transition: transform 200ms;
   }
 
-  .header__gnb-submenu-group {
-    display: none;
+  .center {
     position: static;
-    padding: 0;
     border-top: none;
     border-bottom: none;
+  }
+
+  .header__gnb-submenu-group {
+    display: block;
+    padding: 0;
     background-color: #f7f7f7;
   }
 
