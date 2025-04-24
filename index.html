@@ -16,6 +16,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home"
     />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- bootstrap icon -->
     <link
       rel="stylesheet"
@@ -128,13 +133,246 @@
       </div>
     </section>
 
+    <section class="fsw">
+      <div class="inner">
+        <div class="fsw__container">
+          <div class="fsw__t-group">
+            <button class="fsw__t is-selected flight-booking">
+              항공권 예매
+            </button>
+            <button class="fsw__t reservation-lookup">예약 조회</button>
+            <button class="fsw__t check-in">체크인</button>
+            <button class="fsw__t flight-status">출도착 조회</button>
+          </div>
+          <div class="fsw__tp-group">
+            <div class="fsw__tp tp-flight-booking is-active">
+              <div class="fsw__ctrl-group">
+                <div class="fsw__ctrls tp-flight-booking__mileage-group">
+                  <button
+                    class="fsw__ctrl is-selected tp-flight-booking__ctrl-booking-type standard"
+                  >
+                    일반 예매
+                  </button>
+                  <button
+                    class="fsw__ctrl tp-flight-booking__ctrl-booking-type mileage"
+                  >
+                    마일리지 예매
+                  </button>
+                </div>
+                <div class="fsw__ctrls tp-flight-booking__trip-type-group">
+                  <button
+                    class="fsw__ctrl is-selected tp-flight-booking__ctrl-trip-type round-trip"
+                  >
+                    왕복
+                  </button>
+                  <button
+                    class="fsw__ctrl tp-flight-booking__ctrl-trip-type one-way"
+                  >
+                    편도
+                  </button>
+                  <button
+                    class="fsw__ctrl tp-flight-booking__ctrl-trip-type multi-city"
+                  >
+                    다구간
+                  </button>
+                </div>
+                <div class="tp-flight-booking__nearby-dates-checkbox">
+                  <input id="nearby-dates" type="checkbox" />
+                  <label for="nearby-dates">가까운 날짜 함께 조회</label>
+                </div>
+              </div>
+              <div
+                class="field-group is-active tp-flight-booking__round-trip-field-group"
+              >
+                <div class="location-group">
+                  <button class="field-area flight-origin">출발지</button>
+                  <button class="switch-location">
+                    <i class="bi bi-arrow-left-right"></i>
+                  </button>
+                  <button class="field-area flight-destination">도착지</button>
+                </div>
+                <div class="date-group">
+                  <button class="field-area departure-date">가는 날</button>
+                  <button class="field-area return-date">오는 날</button>
+                </div>
+                <button class="field-area passenger-count">승객 수</button>
+                <button class="field-area seat-grade-option">좌석 등급</button>
+                <button class="btn-fsw__search">항공권 조회</button>
+              </div>
+              <div class="field-group tp-flight-booking__one-way-field-group">
+                <div class="location-group">
+                  <button class="field-area flight-origin">출발지</button>
+                  <button class="switch-location">
+                    <i class="bi bi-arrow-left-right"></i>
+                  </button>
+                  <button class="field-area flight-destination">도착지</button>
+                </div>
+                <div class="date-group">
+                  <button class="field-area departure-date">가는 날</button>
+                </div>
+                <button class="field-area passenger-count">승객 수</button>
+                <button class="field-area seat-grade-option">좌석 등급</button>
+                <button class="btn-fsw__search">항공권 조회</button>
+              </div>
+              <div
+                class="field-group tp-flight-booking__multi-city-field-group"
+              >
+                <div class="tp-flight-booking__multi-city-field first-trip">
+                  <div class="location-group">
+                    <button class="field-area flight-origin">출발지</button>
+                    <button class="switch-location">
+                      <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <button class="field-area flight-destination">
+                      도착지
+                    </button>
+                  </div>
+                  <button class="field-area departure-date">가는 날</button>
+                </div>
+                <div class="tp-flight-booking__multi-city-field second-trip">
+                  <div class="location-group">
+                    <button class="field-area flight-origin">출발지</button>
+                    <button class="switch-location">
+                      <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <button class="field-area flight-destination">
+                      도착지
+                    </button>
+                  </div>
+                  <button class="field-area departure-date">가는 날</button>
+                </div>
+                <button class="btn-fsw__add-more-trip">
+                  <i class="bi bi-plus-lg"></i>
+                  여정 추가하기
+                </button>
+                <button class="field-area passenger-count">승객 수</button>
+                <button class="field-area seat-grade-option">좌석 등급</button>
+                <button class="btn-fsw__search">항공권 조회</button>
+              </div>
+            </div>
+            <div class="fsw__tp tp-reservation-lookup">
+              <div class="field-group">
+                <input
+                  type="text"
+                  class="fsw__tp-input reservation-number"
+                  placeholder="예약 번호 또는 항공권 번호"
+                />
+                <button class="boarding-date">탑승일</button>
+                <div class="passenger-name-group">
+                  <input
+                    type="text"
+                    class="fsw__tp-input passenger-name last-name"
+                    placeholder="승객 성 (Last Name)"
+                  />
+                  <input
+                    type="text"
+                    class="fsw__tp-input passenger-name first-name"
+                    placeholder="승객 이름 (First Name)"
+                  />
+                </div>
+                <div class="fsw__desc">
+                  <p>
+                    * 예약 번호는 8자리 숫자 또는 6자리 영문/숫자를 입력하세요.
+                  </p>
+                  <p>
+                    * 국내선 예약은 국문 성/이름, 국제선은 영문 성/이름을
+                    입력하세요.
+                  </p>
+                </div>
+              </div>
+              <button class="btn-fsw__search">예약 조회</button>
+            </div>
+            <div class="fsw__tp tp-check-in">
+              <div class="field-group">
+                <input
+                  type="text"
+                  class="fsw__tp-input reservation-number"
+                  placeholder="예약 번호 또는 항공권 번호"
+                />
+                <select name="" id="" class="boarding-date">
+                  <option value="">탑승일 선택</option>
+                  <option value="">4월 23일 (수)</option>
+                  <option value="">4월 24일 (목)</option>
+                  <option value="">4월 25일 (금)</option>
+                  <option value="">4월 26일 (토)</option>
+                </select>
+                <div class="passenger-name-group">
+                  <input
+                    type="text"
+                    class="fsw__tp-input passenger-name last-name"
+                    placeholder="승객 성 (Last Name)"
+                  />
+                  <input
+                    type="text"
+                    class="fsw__tp-input passenger-name first-name"
+                    placeholder="승객 이름 (First Name)"
+                  />
+                </div>
+                <div class="fsw__desc">
+                  <p>
+                    * 예약 번호는 8자리 숫자 또는 6자리 영문/숫자를 입력하세요.
+                  </p>
+                  <p>
+                    * 국내선 예약은 국문 성/이름, 국제선은 영문 성/이름을
+                    입력하세요.
+                  </p>
+                </div>
+              </div>
+              <button class="btn-fsw__search">조회</button>
+            </div>
+            <div class="fsw__tp tp-flight-status">
+              <div class="tp-flight-status__ctrls fsw__ctrls">
+                <button
+                  class="fsw__ctrl tp-flight-status__ctrl is-selected route-search"
+                >
+                  노선조회
+                </button>
+                <button class="fsw__ctrl tp-flight-status__ctrl number-search">
+                  편명조회
+                </button>
+              </div>
+              <div
+                class="field-group tp-flight-status__field is-active tp-flight-status__route-field"
+              >
+                <div class="location-group">
+                  <button class="field-area flight-origin">출발지</button>
+                  <button class="field-area flight-destination">도착지</button>
+                </div>
+                <button class="boarding-date">출발일</button>
+                <button class="btn-fsw__search">조회</button>
+                <div class="fsw__desc">
+                  <p>* 출발일은 출발지 기준입니다.</p>
+                </div>
+              </div>
+              <div
+                class="field-group tp-flight-status__field tp-flight-status__number-field"
+              >
+                <input
+                  type="text"
+                  class="fsw__tp-input reservation-number"
+                  placeholder="숫자만 입력"
+                />
+                <button class="boarding-date">출발일</button>
+                <button class="btn-fsw__search">조회</button>
+                <div class="fsw__desc">
+                  <p>* 출발일은 출발지 기준입니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay"></div>
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/js/slide.js"></script>
+    <script src="/js/slider.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
