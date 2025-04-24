@@ -1,0 +1,295 @@
+/* flight-services-widget ----------------------------------------- */
+.fsw {
+  margin: 50px 0 60px 0;
+}
+
+.fsw__container {
+}
+
+/* tab */
+.fsw__t-group {
+  display: flex;
+  gap: 2px;
+}
+
+.fsw__t {
+  flex: 1;
+  height: 50px;
+  background-color: #9b9b9b;
+  font-size: var(--font-size-20);
+  color: var(--white);
+  border-radius: 15px 15px 0 0;
+}
+
+.fsw__t.is-selected {
+  color: var(--body-text);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  background-color: var(--white);
+}
+
+/* tab-panel */
+.fsw__tp-group {
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 40px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--shadow);
+  font-size: var(--font-size-18);
+}
+
+.fsw__tp {
+  display: none;
+}
+
+.fsw__tp.is-active {
+  display: block;
+}
+
+/* control 공통 스타일 */
+.fsw__ctrl-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.fsw__ctrls {
+  display: flex;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+}
+
+.fsw__ctrl {
+  padding: 8px 20px;
+}
+
+.fsw__ctrl.is-selected {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 25px;
+}
+
+/* 공통 버튼 스타일 */
+.btn-fsw__search {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--blue);
+  color: var(--white);
+  grid-column: span 2;
+}
+
+/* field 공통 스타일 */
+.field-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  font-size: var(--font-size-18);
+}
+
+.location-group {
+  grid-column: span 2;
+  display: flex;
+  gap: 10px;
+}
+
+.date-group {
+  grid-column: span 2;
+  display: flex;
+  gap: 20px;
+}
+
+.field-area {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  text-align: left;
+}
+
+.switch-location {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.switch-location:hover {
+  border: 1px solid var(--border);
+}
+
+.flight-origin::before,
+.flight-destination::before,
+.departure-date::before,
+.return-date::before,
+.passenger-count::before,
+.seat-grade-option::before,
+.boarding-date::before {
+  display: inline-block;
+  transform: translateY(5px);
+  padding-right: 8px;
+}
+
+.flight-origin::before,
+.flight-destination::before {
+  font-family: var(--google-icon);
+  content: "\e0c8";
+  font-size: 24px;
+}
+
+.departure-date::before,
+.return-date::before {
+  font-family: var(--google-icon);
+  content: "\e935";
+  font-size: 22px;
+}
+
+.boarding-date::before {
+  font-family: var(--google-icon);
+  content: "\e935";
+  font-size: 22px;
+}
+
+.passenger-count::before {
+  font-family: var(--google-icon);
+  content: "\e7fd";
+  font-size: 24px;
+}
+
+.seat-grade-option::before {
+  font-family: var(--google-icon);
+  content: "\e637";
+  font-size: 24px;
+}
+
+.flight-origin {
+  flex: 1;
+}
+
+.flight-destination {
+  flex: 1;
+}
+
+.departure-date {
+  flex: 1;
+}
+
+.return-date {
+  flex: 1;
+}
+
+.passenger-count {
+}
+
+.seat-grade-option {
+}
+
+.fsw__tp-input {
+  border: none;
+  border-bottom: 1px solid var(--border);
+  grid-column: span 1;
+  padding-bottom: 6px;
+}
+
+.boarding-date {
+  border: none;
+  border-bottom: 1px solid var(--border);
+  grid-column: span 1;
+  text-align: left;
+  padding-bottom: 6px;
+}
+
+.boarding-date:focus {
+  outline: none;
+}
+
+.passenger-name-group {
+  grid-column: span 2;
+  display: flex;
+  gap: 20px;
+}
+
+.fsw__desc {
+  grid-column: span 4;
+  font-size: var(--font-size-16);
+  margin-bottom: 30px;
+}
+
+/* 항공권 예매: panel-flight-booking */
+.tp-flight-booking {
+}
+
+.tp-flight-booking .field-group {
+  display: none;
+}
+
+.tp-flight-booking .field-group.is-active {
+  display: grid;
+}
+
+.tp-flight-booking__nearby-dates-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tp-flight-booking__nearby-dates-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: translateY(1px);
+  accent-color: var(--blue);
+}
+
+.tp-flight-booking__multi-city-field {
+  grid-column: span 4;
+  display: flex;
+  gap: 20px;
+}
+
+.tp-flight-booking__multi-city-field .location-group {
+  flex: 1;
+}
+
+.btn-fsw__add-more-trip {
+  grid-column: span 4;
+  height: 45px;
+  border-radius: 8px;
+  background-color: var(--border);
+}
+
+.btn-fsw__add-more-trip:hover {
+  opacity: 0.7;
+}
+
+/* 예약 조회: panel-reservation-lookup */
+.tp-reservation-lookup {
+}
+
+/* 체크인: panel-check-in */
+.tp-check-in {
+}
+
+/* 출도착 조회: panel-flight-status */
+.tp-flight-status {
+}
+
+.tp-flight-status__ctrls {
+  width: 217px;
+  margin-bottom: 30px;
+}
+
+.tp-flight-status .location-group {
+  gap: 30px;
+}
+
+.tp-flight-status .btn-fsw__search {
+  grid-column: span 1;
+}
+
+.tp-flight-status__field {
+  display: none;
+}
+
+.tp-flight-status__field.is-active {
+  display: grid;
+}
