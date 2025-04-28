@@ -69,7 +69,7 @@
 }
 
 /* 공통 버튼 스타일 */
-.btn-fsw__search {
+.fsw__btn-search {
   width: 100%;
   height: 40px;
   border-radius: 4px;
@@ -79,39 +79,39 @@
 }
 
 /* field 공통 스타일 */
-.field-group {
+.fsw__tp-field-group {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   font-size: var(--font-size-18);
 }
 
-.location-group {
+.fsw__tp-location-group {
   grid-column: span 4;
   display: flex;
   gap: 10px;
 }
 
-.date-group {
+.fsw__tp-date-group {
   grid-column: span 2;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.field-area {
+.fsw__tp-field-area {
   border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
   text-align: left;
 }
 
-.switch-location {
+.fsw__tp-switch-location {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   border: 1px solid transparent;
 }
 
-.switch-location:hover {
+.fsw__tp-switch-location:hover {
   border: 1px solid var(--border);
 }
 
@@ -173,7 +173,7 @@
   width: 100%;
 }
 
-.boarding-date {
+.fsw__tp-boarding-date {
   border: none;
   border-bottom: 1px solid var(--border);
   grid-column: span 1;
@@ -181,28 +181,28 @@
   padding-bottom: 6px;
 }
 
-.boarding-date:focus {
+.fsw__tp-boarding-date:focus {
   outline: none;
 }
 
-.passenger-name-group {
+.fsw__tp-passenger-name-group {
   grid-column: span 2;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
-.fsw__desc {
+.fsw__tp-desc {
   grid-column: span 4;
   font-size: var(--font-size-16);
   margin-bottom: 30px;
 }
 
 /* 항공권 예매: tp-flight-booking */
-.tp-flight-booking .field-group {
+.tp-flight-booking .fsw__tp-field-group {
   display: none;
 }
 
-.tp-flight-booking .field-group.is-active {
+.tp-flight-booking .fsw__tp-field-group.is-active {
   display: grid;
 }
 
@@ -234,24 +234,30 @@
   color: var(--gray-text);
 }
 
-.tp-flight-booking__multi-city-field .location-group {
+.tp-flight-booking__multi-city-field .fsw__tp-location-group {
   flex: 1;
 }
 
-.tp-flight-booking__multi-city-field-group .passenger-count,
-.tp-flight-booking__multi-city-field-group .seat-grade-option {
+.tp-flight-booking__multi-city .passenger-count,
+.tp-flight-booking__multi-city .seat-grade-option {
   grid-column: span 2;
 }
 
-.btn-fsw__add-more-trip {
+.fsw__btn-add-more-trip {
   grid-column: span 4;
   height: 45px;
   border-radius: 8px;
   background-color: var(--border);
 }
 
-.btn-fsw__add-more-trip:hover {
+.fsw__btn-add-more-trip:hover {
   opacity: 0.7;
+}
+
+/* 체크인 */
+select.fsw__tp-select-boarding-date {
+  border: none;
+  border-bottom: 1px solid var(--border);
 }
 
 /* 출도착 조회: tp-flight-status */
@@ -260,29 +266,29 @@
   margin-bottom: 30px;
 }
 
-.tp-flight-status .location-group {
+.tp-flight-status .fsw__tp-location-group {
   gap: 30px;
 }
 
 .tp-flight-status .boarding-date,
-.tp-flight-status .btn-fsw__search,
+.tp-flight-status .fsw__btn-search,
 .tp-flight-status .reservation-number {
   grid-column: span 2;
 }
 
-.tp-flight-status .fsw__desc {
+.tp-flight-status .fsw__tp-desc {
   margin-bottom: 0;
 }
 
-.tp-flight-status__field {
+.tp-flight-status .fsw__tp-field-group {
   display: none;
 }
 
-.tp-flight-status__field.is-active {
+.tp-flight-status .fsw__tp-field-group.is-active {
   display: grid;
 }
 
-.tp-flight-status__number-field .btn-fsw__search {
+.tp-flight-status__number .fsw__btn-search {
   grid-column: span 4;
 }
 
@@ -315,7 +321,7 @@
     grid-column: span 2;
   }
 
-  .passenger-name-group {
+  .fsw__tp-passenger-name-group {
     grid-column: span 4;
   }
 
@@ -323,11 +329,11 @@
     flex-grow: 1;
   }
 
-  select.boarding-date {
+  select.fsw__tp-select-boarding-date {
     grid-column: span 2;
   }
 
-  select.boarding-date option {
+  select.fsw__tp-select-boarding-date option {
     font-size: 16px;
   }
 }
@@ -339,9 +345,9 @@
     align-items: flex-start;
   }
 
-  .btn-fsw__search,
-  .location-group,
-  .date-group {
+  .fsw__btn-search,
+  .fsw__tp-location-group,
+  .fsw__tp-date-group {
     grid-column: span 4;
   }
 
@@ -357,8 +363,13 @@
     flex-direction: column;
   }
 
+  /* 체크인 */
+  select.fsw__tp-select-boarding-date {
+    grid-column: span 2;
+  }
+
   /* 예약 조회: tp-reservation-lookup */
-  .passenger-name-group {
+  .fsw__tp-passenger-name-group {
     grid-column: span 4;
   }
 }
@@ -367,7 +378,7 @@
   .fsw__t,
   .fsw__ctrl,
   label,
-  .field-area {
+  .fsw__tp-field-area {
     font-size: var(--font-size-16);
   }
 
@@ -386,36 +397,42 @@
     align-items: flex-start;
   }
 
-  .btn-fsw__search,
-  .fsw__tp-input,
-  .boarding-date.tp-flight-status .boarding-date,
-  .passenger-name-group,
-  .passenger-count,
-  .seat-grade-option {
+  .fsw__tp-field-area {
     grid-column: span 4;
   }
 
-  .field-area {
+  .fsw__btn-search,
+  .fsw__tp-input,
+  .tp-flight-status .boarding-date,
+  .fsw__tp-passenger-name-group {
+    grid-column: span 4;
+  }
+
+  .tp-flight-booking__multi-city .passenger-count,
+  .tp-flight-booking__multi-city .seat-grade-option {
+    grid-column: span 4;
+  }
+
+  .fsw__tp-field-area {
     width: 100%;
   }
 
-  .passenger-name-group {
+  .fsw__tp-passenger-name-group {
     flex-direction: column;
   }
 
   /* 항공권 예매: tp-flight-booking */
-
-  .location-group,
-  .date-group {
+  .fsw__tp-location-group,
+  .fsw__tp-date-group {
     grid-column: span 4;
     flex-direction: column;
   }
 
-  .location-group {
+  .fsw__tp-location-group {
     align-items: center;
   }
 
-  .date-group {
+  .fsw__tp-date-group {
     gap: 30px;
   }
 
@@ -430,22 +447,26 @@
     color: var(--gray-text);
   }
 
-  .tp-flight-booking__multi-city-field-group .passenger-count,
-  .tp-flight-booking__multi-city-field-group .seat-grade-option {
+  .tp-flight-booking__multi-city-field .passenger-count,
+  .tp-flight-booking__multi-city-field .seat-grade-option {
+    grid-column: span 4;
+  }
+
+  select.fsw__tp-select-boarding-date {
     grid-column: span 4;
   }
 
   /* 예약 조회: tp-reservation-lookup */
-  .boarding-date {
+  .fsw__tp-boarding-date {
     grid-column: span 4;
   }
 
-  .passenger-name-group {
+  .fsw__tp-passenger-name-group {
     gap: 30px;
   }
 
   /* 출도착 조회: tp-flight-status */
-  .tp-flight-status .btn-fsw__search,
+  .tp-flight-status .fsw__btn-search,
   .tp-flight-status .reservation-number {
     grid-column: span 4;
   }
@@ -454,7 +475,7 @@
     margin-bottom: 0;
   }
 
-  .tp-flight-status .boarding-date {
+  .tp-flight-status .fsw__tp-boarding-date {
     grid-column: span 4;
   }
 }
