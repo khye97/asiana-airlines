@@ -24,4 +24,9 @@
 
   /* margin */
   --section-title-margin: 24px;
+
+  /* z-index */
+  --header: 999;
+  --mobile-gnb: 9999;
+  --overlay: 20;
 }
