@@ -1,6 +1,12 @@
 .header {
   box-shadow: var(--shadow);
   height: 114px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  z-index: var(--header);
 }
 
 .header__container {
@@ -235,7 +241,7 @@
     border-right: 1px solid var(--border);
     transform: translateX(-100%);
     transition: transform 300ms;
-    z-index: 999;
+    z-index: var(--mobile-gnb);
   }
 
   .header__gnb-mobile-close {

@@ -4,3 +4,13 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+
+.main {
+  margin-top: 114px;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    margin-top: 65px;
+  }
+}
