@@ -112,9 +112,9 @@
   padding: 10px 30px;
 }
 
-.header__gnb-item:hover .center {
+/* .header__gnb-item:hover .center {
   display: block;
-}
+} */
 
 .center {
   display: none;
@@ -277,10 +277,6 @@
     display: flex;
     border-bottom: 1px solid var(--border);
     align-items: center;
-  }
-
-  .header__gnb-title-group:hover .center {
-    display: block;
   }
 
   .header__gnb-title {
