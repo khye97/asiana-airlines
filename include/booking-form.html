@@ -1,38 +1,57 @@
 <div class="inner">
   <div class="fsw__container">
     <div class="fsw__t-group">
-      <button class="fsw__t is-selected flight-booking">항공권 예매</button>
-      <button class="fsw__t reservation-lookup">예약 조회</button>
-      <button class="fsw__t check-in">체크인</button>
-      <button class="fsw__t flight-status">출도착 조회</button>
+      <button
+        class="fsw__t is-selected flight-booking"
+        data-tab="flight-booking"
+      >
+        항공권 예매
+      </button>
+      <button class="fsw__t reservation-lookup" data-tab="reservation-lookup">
+        예약 조회
+      </button>
+      <button class="fsw__t check-in" data-tab="check-in">체크인</button>
+      <button class="fsw__t flight-status" data-tab="flight-status">
+        출도착 조회
+      </button>
     </div>
     <div class="fsw__tp-group">
       <!-- tp-flight-booking__ -->
-      <div class="fsw__tp tp-flight-booking is-active">
+      <div
+        class="fsw__tp tp-flight-booking is-active"
+        data-tab-panel="flight-booking"
+      >
         <div class="fsw__ctrl-group">
           <div class="fsw__ctrls tp-flight-booking__mileage-group">
             <button
-              class="fsw__ctrl is-selected tp-flight-booking__ctrl-booking-type standard"
+              class="fsw__ctrl is-selected tp-flight-booking__ctrl-booking-type"
+              data-ctrl="standard"
             >
               일반 예매
             </button>
             <button
-              class="fsw__ctrl tp-flight-booking__ctrl-booking-type mileage"
+              class="fsw__ctrl tp-flight-booking__ctrl-booking-type"
+              data-ctrl="mileage"
             >
               마일리지 예매
             </button>
           </div>
           <div class="fsw__ctrls tp-flight-booking__trip-type-group">
             <button
-              class="fsw__ctrl is-selected tp-flight-booking__ctrl-trip-type round-trip"
+              class="fsw__ctrl is-selected tp-flight-booking__ctrl tp-flight-booking__ctrl-trip-type"
+              data-ctrl="round-trip"
             >
               왕복
             </button>
-            <button class="fsw__ctrl tp-flight-booking__ctrl-trip-type one-way">
+            <button
+              class="fsw__ctrl tp-flight-booking__ctrl tp-flight-booking__ctrl-trip-type"
+              data-ctrl="one-way"
+            >
               편도
             </button>
             <button
-              class="fsw__ctrl tp-flight-booking__ctrl-trip-type multi-city"
+              class="fsw__ctrl tp-flight-booking__ctrl tp-flight-booking__ctrl-trip-type"
+              data-ctrl="multi-city"
             >
               다구간
             </button>
@@ -44,6 +63,7 @@
         </div>
         <div
           class="fsw__tp-field-group tp-flight-booking__round-trip is-active"
+          data-ctrl-panel="round-trip"
         >
           <div class="fsw__tp-location-group">
             <button class="fsw__tp-field-area flight-origin">출발지</button>
@@ -64,7 +84,10 @@
           </button>
           <button class="fsw__btn-search">항공권 조회</button>
         </div>
-        <div class="fsw__tp-field-group tp-flight-booking__one-way">
+        <div
+          class="fsw__tp-field-group tp-flight-booking__one-way"
+          data-ctrl-panel="one-way"
+        >
           <div class="fsw__tp-location-group">
             <button class="fsw__tp-field-area flight-origin">출발지</button>
             <button class="fsw__tp-switch-location">
@@ -83,7 +106,10 @@
           </button>
           <button class="fsw__btn-search">항공권 조회</button>
         </div>
-        <div class="fsw__tp-field-group tp-flight-booking__multi-city">
+        <div
+          class="fsw__tp-field-group tp-flight-booking__multi-city"
+          data-ctrl-panel="multi-city"
+        >
           <div class="tp-flight-booking__multi-city-field first-trip">
             <div class="desc">첫 번째 여정</div>
             <div class="flex">
@@ -126,7 +152,10 @@
         </div>
       </div>
       <!-- tp-reservation-lookup__ -->
-      <div class="fsw__tp tp-reservation-lookup">
+      <div
+        class="fsw__tp tp-reservation-lookup"
+        data-tab-panel="reservation-lookup"
+      >
         <div class="fsw__tp-field-group">
           <input
             type="text"
@@ -156,7 +185,7 @@
         <button class="fsw__btn-search">예약 조회</button>
       </div>
       <!-- tp-check-in__ -->
-      <div class="fsw__tp tp-check-in">
+      <div class="fsw__tp tp-check-in" data-tab-panel="check-in">
         <div class="fsw__tp-field-group">
           <input
             type="text"
@@ -192,18 +221,22 @@
         <button class="fsw__btn-search">조회</button>
       </div>
       <!-- tp-flight-status__ -->
-      <div class="fsw__tp tp-flight-status">
+      <div class="fsw__tp tp-flight-status" data-tab-panel="flight-status">
         <div class="tp-flight-status__ctrls fsw__ctrls">
           <button
-            class="fsw__ctrl tp-flight-status__ctrl is-selected route-search"
+            class="fsw__ctrl tp-flight-status__ctrl is-selected"
+            data-ctrl="route"
           >
             노선조회
           </button>
-          <button class="fsw__ctrl tp-flight-status__ctrl number-search">
+          <button class="fsw__ctrl tp-flight-status__ctrl" data-ctrl="number">
             편명조회
           </button>
         </div>
-        <div class="fsw__tp-field-group is-active tp-flight-status__route">
+        <div
+          class="fsw__tp-field-group is-active tp-flight-status__route"
+          data-ctrl-panel="route"
+        >
           <div class="fsw__tp-location-group">
             <button class="fsw__tp-field-area flight-origin">출발지</button>
             <button class="fsw__tp-field-area flight-destination">
@@ -216,7 +249,10 @@
             <p>* 출발일은 출발지 기준입니다.</p>
           </div>
         </div>
-        <div class="fsw__tp-field-group tp-flight-status__number">
+        <div
+          class="fsw__tp-field-group tp-flight-status__number"
+          data-ctrl-panel="number"
+        >
           <input
             type="text"
             class="fsw__tp-input reservation-number"
@@ -230,5 +266,1792 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="fsw-modal fsw-modal__airport">
+  <div class="fsw-modal__container">
+    <button class="fsw-modal__close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="fsw-modal__header">
+      <h3 class="fsw-modal__title-origin fsw-modal__header-title">
+        출발지 선택
+      </h3>
+      <div class="fsw-modal__search-input-wrap">
+        <input
+          type="text"
+          class="fsw-modal__search-input"
+          placeholder="도시 또는 공항을 입력해주세요"
+        />
+        <button class="fsw-modal__btn-search">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="fsw-modal__country-airport-wrap">
+      <div class="fsw-modal__region-wrap">
+        <ul class="fsw-modal__region-list">
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name is-active"
+              data-region="korea"
+            >
+              대한민국
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="northeast-asia"
+            >
+              동북아시아
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="southeast-asia"
+            >
+              동남아시아
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="americas"
+            >
+              미주
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="europe"
+            >
+              유럽
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="oceania"
+            >
+              대양주
+            </button>
+          </li>
+          <li class="fsw-modal__region-item">
+            <button
+              class="fsw-modal__select-region fsw-modal__region-name"
+              data-region="mongolia-central-asia"
+            >
+              몽골/중앙아시아
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="fsw-modal__city-airport-wrap is-active" data-region="korea">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">서울/인천</span>
+                <span class="airport-code">ICN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">서울/김포</span>
+                <span class="airport-code">GMP</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">제주</span>
+                <span class="airport-code">CJU</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">광주</span>
+                <span class="airport-code">KWJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">대구</span>
+                <span class="airport-code">TAE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">여수/순천</span>
+                <span class="airport-code">RSU</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="fsw-modal__other-destinations">
+          <div class="fsw-modal__served-destination-title">그외</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">부산/김해</span>
+                <span class="airport-code">PUS</span>
+              </button>
+            </li>
+
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">울산</span>
+                <span class="airport-code">USN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">포항/경주</span>
+                <span class="airport-code">KPO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">진주/사천</span>
+                <span class="airport-code">HIN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">무안</span>
+                <span class="airport-code">MWX</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fsw-modal__city-airport-wrap" data-region="northeast-asia">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오사카/간사이</span>
+                <span class="airport-code">KIX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">구마모토</span>
+                <span class="airport-code">KMJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">광저우</span>
+                <span class="airport-code">CAN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">구이린</span>
+                <span class="airport-code">KWL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">나고야</span>
+                <span class="airport-code">NGO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">난징</span>
+                <span class="airport-code">NKG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">다롄</span>
+                <span class="airport-code">DLC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">도쿄/나리타</span>
+                <span class="airport-code">NRT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">도쿄/하네다</span>
+                <span class="airport-code">HND</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">미야자키</span>
+                <span class="airport-code">KMI</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">베이징</span>
+                <span class="airport-code">PEK</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">삿포로/치토세/북해도(홋카이도)</span>
+                <span class="airport-code">CTS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">상하이/푸동</span>
+                <span class="airport-code">SHA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">상하이/홍차오</span>
+                <span class="airport-code">SHA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">선전</span>
+                <span class="airport-code">SZX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">센다이</span>
+                <span class="airport-code">SDJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시안</span>
+                <span class="airport-code">XIY</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">아사히카와/북해도(홋카이도)</span>
+                <span class="airport-code">AKJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">옌지</span>
+                <span class="airport-code">YNJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">옌청</span>
+                <span class="airport-code">YNZ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">옌타이</span>
+                <span class="airport-code">YNT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">웨이하이</span>
+                <span class="airport-code">WEH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">창사</span>
+                <span class="airport-code">CSX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">창춘</span>
+                <span class="airport-code">CGQ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">청두/톈푸</span>
+                <span class="airport-code">TFU</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">충칭</span>
+                <span class="airport-code">CKG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">칭다오</span>
+                <span class="airport-code">TAO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">타이베이</span>
+                <span class="airport-code">TPE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">톈진</span>
+                <span class="airport-code">TSN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">하얼빈</span>
+                <span class="airport-code">HRB</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">항저우</span>
+                <span class="airport-code">HGH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">홍콩</span>
+                <span class="airport-code">HKG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">후쿠오카</span>
+                <span class="airport-code">FUK</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="fsw-modal__other-destinations">
+          <div class="fsw-modal__served-destination-title">그외</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">가오슝</span>
+                <span class="airport-code">KHH</span>
+              </button>
+            </li>
+
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">마쓰야마</span>
+                <span class="airport-code">MYJ</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fsw-modal__city-airport-wrap" data-region="southeast-asia">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">다낭</span>
+                <span class="airport-code">DAD</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">마닐라</span>
+                <span class="airport-code">MNL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">방콕</span>
+                <span class="airport-code">BKK</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">세부</span>
+                <span class="airport-code">CEB</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">싱가포르</span>
+                <span class="airport-code">SIN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">자카르타</span>
+                <span class="airport-code">CGK</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">클락/앙헬레스</span>
+                <span class="airport-code">CRK</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">프놈펜</span>
+                <span class="airport-code">PNH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">하노이</span>
+                <span class="airport-code">HAN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">호찌민</span>
+                <span class="airport-code">SGN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">치앙마이</span>
+                <span class="airport-code">CNX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">달랏</span>
+                <span class="airport-code">DLI</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fsw-modal__city-airport-wrap" data-region="americas">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">로스앤젤레스, CA</span>
+                <span class="airport-code">LAX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뉴욕/존 F 케네디, NY</span>
+                <span class="airport-code">JFK</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">샌프란시스코, CA</span>
+                <span class="airport-code">SFO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시애틀, WA</span>
+                <span class="airport-code">SEA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">호놀룰루, HI</span>
+                <span class="airport-code">HNL</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="fsw-modal__other-destinations">
+          <div class="fsw-modal__served-destination-title">그외</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시카고/오헤어, IL</span>
+                <span class="airport-code">ORD</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">과달라하라</span>
+                <span class="airport-code">GDL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">그랜 래피스, MI</span>
+                <span class="airport-code">GRR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">그린베이, WI</span>
+                <span class="airport-code">GRB</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">내슈빌, TN</span>
+                <span class="airport-code">BNA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">녹스빌, TN</span>
+                <span class="airport-code">TYS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뉴올리언스, LA</span>
+                <span class="airport-code">MSY</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">댈러스, TX </span>
+                <span class="airport-code">DFW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">데이턴, OH</span>
+                <span class="airport-code">DAY</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">덴버, CO</span>
+                <span class="airport-code">DEN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">드모인, IA</span>
+                <span class="airport-code">DSM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">디트로이트, MI</span>
+                <span class="airport-code">DTW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">라스베이거스, NV</span>
+                <span class="airport-code">LAS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">랜싱, MI</span>
+                <span class="airport-code">LAN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">렉싱턴, KY</span>
+                <span class="airport-code">LEX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">로체스터, NY</span>
+                <span class="airport-code">ROC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">롤리-더럼, NC</span>
+                <span class="airport-code">RDU</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">루이빌, KY</span>
+                <span class="airport-code">SDF</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리노, NV</span>
+                <span class="airport-code">RNO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리치몬드, VA</span>
+                <span class="airport-code">RIC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리틀 락, NE</span>
+                <span class="airport-code">LIT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리후에, HI</span>
+                <span class="airport-code">LIH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">마이애미, FL</span>
+                <span class="airport-code">MIA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">매디슨, WI</span>
+                <span class="airport-code">MSN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">멕시코시티</span>
+                <span class="airport-code">MEX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">멤피스, TN</span>
+                <span class="airport-code">MEM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">몬터레이, CA</span>
+                <span class="airport-code">MRY</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">몬트리올, QC</span>
+                <span class="airport-code">YUL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">몰린, IL</span>
+                <span class="airport-code">MLI</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">미니애폴리스, MN</span>
+                <span class="airport-code">MSP</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">밀워키, WI</span>
+                <span class="airport-code">MKE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">버밍엄, AL</span>
+                <span class="airport-code">BHM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">버팔로, NY</span>
+                <span class="airport-code">BUF</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">벌링텅, VT</span>
+                <span class="airport-code">BTV</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">벤쿠버, BC</span>
+                <span class="airport-code">YVR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">보스턴, MA</span>
+                <span class="airport-code">BOS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">보이시, ID</span>
+                <span class="airport-code">BOI</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">워싱턴/벌티모어, MD</span>
+                <span class="airport-code">BWI</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">빅토리아, BC</span>
+                <span class="airport-code">YYJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">사우스 밴드, IN</span>
+                <span class="airport-code">SBN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">새기노, MI</span>
+                <span class="airport-code">MBS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">새너제이, CA</span>
+                <span class="airport-code">SJC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">새크라멘토, CA</span>
+                <span class="airport-code">SMF</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">샌디에이고, CA</span>
+                <span class="airport-code">SAN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">샌안토니오, TX</span>
+                <span class="airport-code">SAT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">샬럿, NC</span>
+                <span class="airport-code">CLT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">세인트루이스, MO</span>
+                <span class="airport-code">STL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">솔트레이크시티, UT</span>
+                <span class="airport-code">SLC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">스포캔, WA</span>
+                <span class="airport-code">SEG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">스프링필드, MO</span>
+                <span class="airport-code">SGF</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시더래피즈, IA</span>
+                <span class="airport-code">CID</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시러큐스, NY</span>
+                <span class="airport-code">SYR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">신시내티, OH</span>
+                <span class="airport-code">CVG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">애틀란다, GA</span>
+                <span class="airport-code">ATL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">애플톤, WI</span>
+                <span class="airport-code">ATW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">앨버커키, NM</span>
+                <span class="airport-code">ABQ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">앵커리지, AK</span>
+                <span class="airport-code">ANC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">야키마, WA</span>
+                <span class="airport-code">YKM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">에드먼턴, AB</span>
+                <span class="airport-code">YEG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오마하, NE</span>
+                <span class="airport-code">OMA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오스틴, TX</span>
+                <span class="airport-code">AUS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오클라호마 시티, OK</span>
+                <span class="airport-code">OKC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오타와, ON</span>
+                <span class="airport-code">YOW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">올랜도, FL</span>
+                <span class="airport-code">MCO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">워싱턴/덜레스, DC</span>
+                <span class="airport-code">IAD</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fsw-modal__city-airport-wrap" data-region="europe">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">프랑크푸르트</span>
+                <span class="airport-code">FRA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">런던/히드로</span>
+                <span class="airport-code">LHR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">파리/샤를 드 골</span>
+                <span class="airport-code">CDG</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">로마/다빈치</span>
+                <span class="airport-code">FCO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">바르셀로나</span>
+                <span class="airport-code">BCN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">이스탄불</span>
+                <span class="airport-code">IST</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">프라하</span>
+                <span class="airport-code">PRG</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="fsw-modal__other-destinations">
+          <div class="fsw-modal__served-destination-title">그외</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">부쿠레슈티</span>
+                <span class="airport-code">BUH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">이즈미르</span>
+                <span class="airport-code">ADB</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">베네치아</span>
+                <span class="airport-code">VCE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">고센버그</span>
+                <span class="airport-code">GOT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">그라나다</span>
+                <span class="airport-code">GRX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">그라츠</span>
+                <span class="airport-code">GRZ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">글래스고</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">나폴리</span>
+                <span class="airport-code">NAP</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뉘른베르크(철도)</span>
+                <span class="airport-code">ZAQ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뉴캐슬</span>
+                <span class="airport-code">NCL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">니스</span>
+                <span class="airport-code">NCE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">더블린</span>
+                <span class="airport-code">DUB</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뒤셀도르프</span>
+                <span class="airport-code">DUS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뒤셀도르프(철도)</span>
+                <span class="airport-code">QDU</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">드레스덴</span>
+                <span class="airport-code">DRS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">드레스텐(철도)</span>
+                <span class="airport-code">XIR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">라메지아테르메</span>
+                <span class="airport-code">SUF</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">라이프치히</span>
+                <span class="airport-code">LEJ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">라이프치히(철도)</span>
+                <span class="airport-code">XIT</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">라코루냐</span>
+                <span class="airport-code">LGC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">란사로테 섬</span>
+                <span class="airport-code">ACE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">로도스</span>
+                <span class="airport-code">RHO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리스본</span>
+                <span class="airport-code">LIS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">리옹</span>
+                <span class="airport-code">LYS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">린츠</span>
+                <span class="airport-code">LNZ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">멤피스, TN</span>
+                <span class="airport-code">MEM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">마드리드</span>
+                <span class="airport-code">MAD</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">몬트리올, QC</span>
+                <span class="airport-code">YUL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">마르세이유</span>
+                <span class="airport-code">MRS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">말라가</span>
+                <span class="airport-code">AGP</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">맨체스터</span>
+                <span class="airport-code">MAN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뮌스터</span>
+                <span class="airport-code">FMO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뮌헨</span>
+                <span class="airport-code">MUC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">뮌헨(철도)</span>
+                <span class="airport-code">ZMU</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">밀라노/리나떼</span>
+                <span class="airport-code">LIN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">밀라노/말펜사</span>
+                <span class="airport-code">MXP</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">바르샤바</span>
+                <span class="airport-code">WAW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">바리</span>
+                <span class="airport-code">BRI</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">바젤</span>
+                <span class="airport-code">BSL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">사우스 밴드, IN</span>
+                <span class="airport-code">SBN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">발렌시아</span>
+                <span class="airport-code">VALC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">버밍엄</span>
+                <span class="airport-code">BHX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">베로나</span>
+                <span class="airport-code">VRN</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="fsw-modal__city-airport-wrap" data-region="oceania">
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">시드니</span>
+                <span class="airport-code">SYD</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">멜버른</span>
+                <span class="airport-code">MEL</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="fsw-modal__other-destinations">
+          <div class="fsw-modal__served-destination-title">그외</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">골드코스트</span>
+                <span class="airport-code">OOL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">브리즈번</span>
+                <span class="airport-code">BNE</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">애들레이드</span>
+                <span class="airport-code">ADL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">오클랜드</span>
+                <span class="airport-code">AKL</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">캐언즈</span>
+                <span class="airport-code">CNS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">캔버라</span>
+                <span class="airport-code">CBR</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">크라이스트처치</span>
+                <span class="airport-code">CHC</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">퍼스</span>
+                <span class="airport-code">PER</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">호바트</span>
+                <span class="airport-code">HBA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">코프스하버</span>
+                <span class="airport-code">CFS</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">탬워스</span>
+                <span class="airport-code">TMW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">올버리</span>
+                <span class="airport-code">ABX</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">알미데일</span>
+                <span class="airport-code">ARM</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">포트 매쿠아리</span>
+                <span class="airport-code">PQQ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">로드하우 아일랜드</span>
+                <span class="airport-code">LDH</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">다윈</span>
+                <span class="airport-code">DRW</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">모리</span>
+                <span class="airport-code">MRZ</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">더보</span>
+                <span class="airport-code">DBO</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">와가와가</span>
+                <span class="airport-code">WGA</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="fsw-modal__city-airport-wrap"
+        data-region="mongolia-central-asia"
+      >
+        <div class="fsw-modal__served-destination">
+          <div class="fsw-modal__served-destination-title">취항지</div>
+          <ul class="fsw-modal__destination-list">
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">울란바타르</span>
+                <span class="airport-code">UBN</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">알마티</span>
+                <span class="airport-code">ALA</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">타슈켄트</span>
+              </button>
+            </li>
+            <li class="fsw-modal__destination-item">
+              <button
+                class="fsw-modal__select-city-airport fsw-modal__city-airport-name"
+              >
+                <span class="city-name">아스타나</span>
+                <span class="airport-code">NQZ</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="fsw-modal__btn-confirm">확인</button>
   </div>
 </div>
