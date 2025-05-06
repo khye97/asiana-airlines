@@ -630,3 +630,51 @@ select.fsw__tp-select-boarding-date {
 .airport-code {
   color: var(--gray-text);
 }
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .fsw-modal {
+    padding: 30px;
+  }
+
+  .fsw-modal__airport {
+    height: 500px;
+  }
+
+  .fsw-modal__region-wrap {
+    width: 135px;
+  }
+
+  .fsw-modal__country-airport-wrap {
+    height: 285px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fsw-modal {
+    padding: 30px;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+  }
+
+  .fsw-modal__container {
+    height: 100%;
+  }
+
+  .fsw-modal__country-airport-wrap {
+    height: 80%;
+  }
+
+  .fsw-modal__city-airport-wrap {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .fsw-modal__select-city-airport {
+    height: auto;
+    padding: 6px 0;
+  }
+}
