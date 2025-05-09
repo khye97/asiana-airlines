@@ -491,7 +491,7 @@ select.fsw__tp-select-boarding-date {
   transform: translate(-50%, -50%);
   padding: 50px;
   overflow: hidden;
-  z-index: var(--booking-modal);
+  z-index: var(--modal);
   border-radius: 8px;
 }
 
@@ -499,18 +499,25 @@ select.fsw__tp-select-boarding-date {
   display: block;
 }
 
-.fsw-modal__btn-confirm {
+.fsw-modal__btn-confirm,
+.fsw-modal__btn-reset {
   background-color: var(--blue);
   color: var(--white);
   width: 100px;
   font-size: 18px;
   height: 35px;
   border-radius: 8px;
-  margin-top: 20px;
+}
+
+.fsw-modal__btn-reset {
+  background-color: var(--gray-text);
 }
 
 .fsw-modal__container {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .fsw-modal__close {
@@ -524,10 +531,6 @@ select.fsw__tp-select-boarding-date {
   opacity: 0.5;
 }
 
-.fsw-modal__header {
-  margin-bottom: 20px;
-}
-
 .fsw-modal__header-title {
   font-family: var(--title-font-400);
   font-size: 24px;
@@ -535,9 +538,6 @@ select.fsw__tp-select-boarding-date {
 }
 
 /* 출발지/도착지 */
-.fsw-modal__airport {
-}
-
 .fsw-modal__search-input-wrap {
   display: flex;
   gap: 10px;
@@ -604,9 +604,6 @@ select.fsw__tp-select-boarding-date {
   display: block;
 }
 
-.fsw-modal__served-destination-title {
-}
-
 .fsw-modal__select-city-airport {
   width: 100%;
   height: 35px;
@@ -621,6 +618,10 @@ select.fsw__tp-select-boarding-date {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.fsw-modal__select-city-airport.is-active {
+  background-color: var(--background);
 }
 
 .fsw-modal__served-destination {
@@ -665,7 +666,7 @@ select.fsw__tp-select-boarding-date {
   }
 
   .fsw-modal__country-airport-wrap {
-    height: 80%;
+    flex-grow: 1;
   }
 
   .fsw-modal__city-airport-wrap {
@@ -676,5 +677,192 @@ select.fsw__tp-select-boarding-date {
   .fsw-modal__select-city-airport {
     height: auto;
     padding: 6px 0;
+  }
+}
+
+/* 캘린더 - 가는날/오는날 */
+.fsw-modal__calendar .fsw-modal__container {
+  gap: 30px;
+}
+
+.fsw-modal__date-group {
+  display: flex;
+  gap: 40px;
+}
+
+.fsw-modal__date-group .fsw-modal__departure-date,
+.fsw-modal__date-group .fsw-modal__return-date {
+  display: inline-block;
+  padding-bottom: 6px;
+  font-size: var(--font-size-16);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  flex-grow: 1;
+}
+
+.fsw-modal__departure-date::before,
+.fsw-modal__return-date::before {
+  font-family: var(--google-icon);
+  content: "\e935";
+  font-size: 20px;
+  display: inline-block;
+  transform: translateY(3px);
+  margin-right: 6px;
+}
+
+.fsw-modal__calendar-group {
+  display: flex;
+  gap: 60px;
+}
+
+.fsw-modal__calendar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.fsw-modal__select-month {
+  border: none;
+  font-size: var(--font-size-18);
+}
+
+.fsw-modal__calendar-table {
+  font-size: var(--font-size-18);
+  border-spacing: 0 8px;
+}
+
+.fsw-modal__calendar-table th {
+  font-weight: 400;
+}
+
+.fsw-modal__calendar-table td {
+  position: relative;
+  border-style: none;
+  padding: 0;
+}
+
+.fsw-modal__calendar-table td button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.fsw-modal__calendar-table td button:disabled {
+  color: var(--gray-text);
+}
+
+.fsw-modal__calendar-table td:hover button:disabled {
+  background-color: var(--white);
+  cursor: auto;
+}
+
+.fsw-modal__calendar-table td:hover button {
+  background-color: var(--background-blue);
+}
+
+.fsw-modal__calendar--sun,
+.fsw-modal__calendar--sun button {
+  color: var(--sunday);
+}
+
+.fsw-modal__calendar--sat,
+.fsw-modal__calendar--sat button {
+  color: var(--saturday);
+}
+
+.fsw-modal__calendar--today button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 1px dashed var(--gray-text);
+  border-radius: 50%;
+}
+
+.fsw-modal__calendar-table .from-day::before,
+.fsw-modal__calendar-table .return-day::before {
+  content: "";
+  border-radius: 50%;
+}
+
+.fsw-modal__calendar-table .from-day {
+  border-radius: 50px 0 0 50px;
+}
+
+.fsw-modal__calendar-table .return-day {
+  border-radius: 0 50px 50px 0;
+}
+
+.fsw-modal__calendar-table .return-day button,
+.fsw-modal__calendar-table .from-day button,
+.fsw-modal__calendar-table .return-day:hover button,
+.fsw-modal__calendar-table .from-day:hover button {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.fsw-modal__calendar-table .middle {
+  background-color: var(--background);
+}
+
+/* tooltip */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  font-size: 14px;
+  z-index: var(--tooltip);
+  width: 40px;
+  height: 25px;
+  border-radius: 4px;
+  line-height: 25px;
+  text-align: center;
+}
+
+[data-tooltip]:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 93%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .fsw-modal__calendar {
+    padding: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fsw-modal__calendar {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+  }
+
+  .fsw-modal__calendar .fsw-modal__container {
+    height: auto;
+  }
+
+  .fsw-modal__calendar-group {
+    flex-direction: column;
+    gap: 30px;
   }
 }

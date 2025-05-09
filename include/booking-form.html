@@ -75,8 +75,18 @@
             </button>
           </div>
           <div class="fsw__tp-date-group">
-            <button class="fsw__tp-field-area departure-date">가는 날</button>
-            <button class="fsw__tp-field-area return-date">오는 날</button>
+            <button
+              class="fsw__tp-field-area departure-date"
+              data-trip="round-trip"
+            >
+              가는 날
+            </button>
+            <button
+              class="fsw__tp-field-area return-date"
+              data-trip="round-trip"
+            >
+              오는 날
+            </button>
           </div>
           <button class="fsw__tp-field-area passenger-count">승객 수</button>
           <button class="fsw__tp-field-area seat-grade-option">
@@ -98,7 +108,12 @@
             </button>
           </div>
           <div class="fsw__tp-date-group">
-            <button class="fsw__tp-field-area departure-date">가는 날</button>
+            <button
+              class="fsw__tp-field-area departure-date"
+              data-trip="one-way"
+            >
+              가는 날
+            </button>
           </div>
           <button class="fsw__tp-field-area passenger-count">승객 수</button>
           <button class="fsw__tp-field-area seat-grade-option">
@@ -122,7 +137,12 @@
                   도착지
                 </button>
               </div>
-              <button class="fsw__tp-field-area departure-date">가는 날</button>
+              <button
+                class="fsw__tp-field-area departure-date"
+                data-trip="one-way"
+              >
+                가는 날
+              </button>
             </div>
           </div>
           <div class="tp-flight-booking__multi-city-field second-trip">
@@ -137,7 +157,12 @@
                   도착지
                 </button>
               </div>
-              <button class="fsw__tp-field-area departure-date">가는 날</button>
+              <button
+                class="fsw__tp-field-area departure-date"
+                data-trip="one-way"
+              >
+                가는 날
+              </button>
             </div>
           </div>
           <button class="fsw__btn-add-more-trip">
@@ -2053,5 +2078,467 @@
       </div>
     </div>
     <button class="fsw-modal__btn-confirm">확인</button>
+  </div>
+</div>
+
+<div class="fsw-modal fsw-modal__calendar" data-calendar-type="">
+  <div class="fsw-modal__container">
+    <button class="fsw-modal__close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="fsw-modal__header">
+      <h3 class="fsw-modal__header-title">일정 선택</h3>
+      <div class="fsw-modal__date-group">
+        <span class="fsw-modal__departure-date">가는 날</span>
+        <span class="fsw-modal__return-date">오는 날</span>
+      </div>
+    </div>
+    <div class="fsw-modal__calendar-group">
+      <div class="fsw-modal__calendar-item">
+        <select class="fsw-modal__select-month">
+          <option value="">2025년 5월</option>
+          <option value="">2025년 6월</option>
+          <option value="">2025년 7월</option>
+          <option value="">2025년 8월</option>
+          <option value="">2025년 9월</option>
+          <option value="">2025년 10월</option>
+        </select>
+        <table class="fsw-modal__calendar-table">
+          <thead>
+            <th class="fsw-modal__calendar--sun">일</th>
+            <th class="fsw-modal__calendar--mon">월</th>
+            <th class="fsw-modal__calendar--tue">화</th>
+            <th class="fsw-modal__calendar--wed">수</th>
+            <th class="fsw-modal__calendar--thu">목</th>
+            <th class="fsw-modal__calendar--fri">금</th>
+            <th class="fsw-modal__calendar--sat">토</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="date" disabled>
+                  1
+                  <input type="hidden" value="2025.05.01(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date" disabled>
+                  2
+                  <input type="hidden" value="2025.05.02(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date" disabled>
+                  3
+                  <input type="hidden" value="2025.05.03(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date" disabled>
+                  4
+                  <input type="hidden" value="2025.05.04(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date" disabled>
+                  5
+                  <input type="hidden" value="2025.05.05(월)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--today" data-tooltip="오늘">
+                <button class="date">
+                  6
+                  <input type="hidden" value="2025.05.06(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  7
+                  <input type="hidden" value="2025.05.07(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  8
+                  <input type="hidden" value="2025.05.08(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  9
+                  <input type="hidden" value="2025.05.09(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  10
+                  <input type="hidden" value="2025.05.10(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  11
+                  <input type="hidden" value="2025.05.11(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  12
+                  <input type="hidden" value="2025.05.12(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  13
+                  <input type="hidden" value="2025.05.13(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  14
+                  <input type="hidden" value="2025.05.14(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  15
+                  <input type="hidden" value="2025.05.15(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  16
+                  <input type="hidden" value="2025.05.16(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  17
+                  <input type="hidden" value="2025.05.17(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  18
+                  <input type="hidden" value="2025.05.18(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  19
+                  <input type="hidden" value="2025.05.19(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  20
+                  <input type="hidden" value="2025.05.20(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  21
+                  <input type="hidden" value="2025.05.21(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  22
+                  <input type="hidden" value="2025.05.22(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  23
+                  <input type="hidden" value="2025.05.23(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  24
+                  <input type="hidden" value="2025.05.24(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  25
+                  <input type="hidden" value="2025.05.25(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  26
+                  <input type="hidden" value="2025.05.26(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  27
+                  <input type="hidden" value="2025.05.27(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  28
+                  <input type="hidden" value="2025.05.28(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  29
+                  <input type="hidden" value="2025.05.29(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  30
+                  <input type="hidden" value="2025.05.30(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  31
+                  <input type="hidden" value="2025.05.31(토)" />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fsw-modal__calendar-item">
+        <select class="fsw-modal__select-month">
+          <option value="">2025년 6월</option>
+          <option value="">2025년 7월</option>
+          <option value="">2025년 8월</option>
+          <option value="">2025년 9월</option>
+          <option value="">2025년 10월</option>
+          <option value="">2025년 11월</option>
+        </select>
+        <table class="fsw-modal__calendar-table">
+          <thead>
+            <th class="fsw-modal__calendar--sun">일</th>
+            <th class="fsw-modal__calendar--mon">월</th>
+            <th class="fsw-modal__calendar--tue">화</th>
+            <th class="fsw-modal__calendar--wed">수</th>
+            <th class="fsw-modal__calendar--thu">목</th>
+            <th class="fsw-modal__calendar--fri">금</th>
+            <th class="fsw-modal__calendar--sat">토</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  1
+                  <input type="hidden" value="2025.06.01(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  2
+                  <input type="hidden" value="2025.06.02(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  3
+                  <input type="hidden" value="2025.06.03(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  4
+                  <input type="hidden" value="2025.06.04(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  5
+                  <input type="hidden" value="2025.06.05(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  6
+                  <input type="hidden" value="2025.06.06(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  7
+                  <input type="hidden" value="2025.06.03(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  8
+                  <input type="hidden" value="2025.06.08(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  9
+                  <input type="hidden" value="2025.06.09(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  10
+                  <input type="hidden" value="2025.06.10(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  11
+                  <input type="hidden" value="2025.06.11(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  12
+                  <input type="hidden" value="2025.06.12(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  13
+                  <input type="hidden" value="2025.06.13(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  14
+                  <input type="hidden" value="2025.06.14(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  15
+                  <input type="hidden" value="2025.06.15(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  16
+                  <input type="hidden" value="2025.06.16(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  17
+                  <input type="hidden" value="2025.06.17(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  18
+                  <input type="hidden" value="2025.06.18(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  19
+                  <input type="hidden" value="2025.06.19(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  20
+                  <input type="hidden" value="2025.06.20(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  21
+                  <input type="hidden" value="2025.06.21(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  22
+                  <input type="hidden" value="2025.06.22(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  23
+                  <input type="hidden" value="2025.06.23(월)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  24
+                  <input type="hidden" value="2025.06.24(화)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  25
+                  <input type="hidden" value="2025.06.25(수)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  26
+                  <input type="hidden" value="2025.06.26(목)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  27
+                  <input type="hidden" value="2025.06.27(금)" />
+                </button>
+              </td>
+              <td class="fsw-modal__calendar--sat">
+                <button class="date">
+                  28
+                  <input type="hidden" value="2025.06.28(토)" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="fsw-modal__calendar--sun">
+                <button class="date">
+                  29
+                  <input type="hidden" value="2025.06.29(일)" />
+                </button>
+              </td>
+              <td>
+                <button class="date">
+                  30
+                  <input type="hidden" value="2025.06.30(월)" />
+                </button>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="fsw-modal__btn-group">
+      <button class="fsw-modal__btn-reset">초기화</button>
+      <button class="fsw-modal__btn-confirm">확인</button>
+    </div>
   </div>
 </div>
