@@ -34,7 +34,7 @@ $("header").load("/include/header.html", function () {
   function toggleSidebar() {
     if ($(".header__gnb").hasClass("active")) {
       $(".header__gnb").removeClass("active");
-      $(".overlay").removeClass("is-active");
+      $(".header-overlay").removeClass("is-active");
       $(".header__gnb-title-group").next(".center").hide();
       $(".header__gnb-title-group")
         .children("i")
@@ -42,7 +42,7 @@ $("header").load("/include/header.html", function () {
     } else {
       if (window.matchMedia("screen and (max-width: 1024px)").matches) {
         $(".header__gnb").addClass("active");
-        $(".overlay").addClass("is-active");
+        $(".header-overlay").addClass("is-active");
       }
     }
   }
@@ -99,7 +99,7 @@ $("header").load("/include/header.html", function () {
   });
 
   // 모바일 gnb 열기/닫기, overlay 클릭시 닫기
-  $(".header__gnb-mobile-open, .header__gnb-mobile-close, .overlay").on(
+  $(".header__gnb-mobile-open, .header__gnb-mobile-close, .header-overlay").on(
     "mouseup",
     function () {
       toggleSidebar();
