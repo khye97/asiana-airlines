@@ -1,17 +1,26 @@
 /* overlay */
-.overlay {
+.overlay,
+.header-overlay {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.overlay.is-active,
+.header-overlay.is-active {
+  display: block;
+}
+
+.overlay {
   z-index: var(--overlay);
 }
 
-.overlay.is-active {
-  display: block;
+.header-overlay {
+  z-index: var(--header-overlay);
 }
 
 /* main-slider ----------------------------------------- */
