@@ -2542,3 +2542,83 @@
     </div>
   </div>
 </div>
+
+<div class="fsw-modal fsw-modal__passenger">
+  <div class="fsw-modal__container">
+    <button class="fsw-modal__close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="fsw-modal__header">
+      <h3 class="fsw-modal__header-title">탑승객 선택</h3>
+    </div>
+    <div class="fsw-modal__passenger-count-form-wrap">
+      <div
+        class="fsw-modal__passenger-count-form adult"
+        data-passenger-type="adult"
+      >
+        <div class="fsw-modal__passenger-form-title">성인</div>
+        <span class="fsw-modal__passenger-form-desc">만 12세 이상</span>
+        <div class="fsw-modal__passenger-input-wrap">
+          <button class="fsw-modal__btn-passenger decrease">
+            <i class="bi bi-dash-lg"></i>
+          </button>
+          <span class="fsw-modal__passenger-count-num">1</span>
+          <button class="fsw-modal__btn-passenger add">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="fsw-modal__passenger-count-form child"
+        data-passenger-type="child"
+      >
+        <div class="fsw-modal__passenger-form-title">소아</div>
+        <span class="fsw-modal__passenger-form-desc">만 2세 ~ 12세 미만</span>
+        <div class="fsw-modal__passenger-input-wrap">
+          <button class="fsw-modal__btn-passenger decrease" disabled>
+            <i class="bi bi-dash-lg"></i>
+          </button>
+          <span class="fsw-modal__passenger-count-num">0</span>
+          <button class="fsw-modal__btn-passenger add">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        class="fsw-modal__passenger-count-form infant"
+        data-passenger-type="infant"
+      >
+        <div class="fsw-modal__passenger-form-title">유아</div>
+        <span class="fsw-modal__passenger-form-desc">만 2세 미만</span>
+        <div class="fsw-modal__passenger-input-wrap">
+          <button class="fsw-modal__btn-passenger decrease" disabled>
+            <i class="bi bi-dash-lg"></i>
+          </button>
+          <span class="fsw-modal__passenger-count-num">0</span>
+          <button class="fsw-modal__btn-passenger add">
+            <i class="bi bi-plus-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <ul class="fsw-modal__passenger-desc-list">
+      <li class="fsw-modal__passenger-desc-item">
+        예약인원은 성인,소아 총 9명까지 선택 가능합니다.
+      </li>
+      <li class="fsw-modal__passenger-desc-item">
+        전 구간에 소아와 함께 여행하는 동반 성인이 있을 경우, 소아 단독 항공권
+        구매가 가능합니다.
+      </li>
+      <li class="fsw-modal__passenger-desc-item">
+        만 2세 미만 유아의 경우 단독 예약이 불가 하며 좌석 제공이 되지 않습니다.
+        성인을 반드시 포함하여 예약해주십시오.
+      </li>
+      <li class="fsw-modal__passenger-desc-item">
+        개인정보보호법 시행령 제39조의3 제④항 강화 시행령에 따라 만 14세 미만
+        미성년자 예매 시 법정대리인의 동의 및 인증이 불가피하므로 14세 이상의
+        성인께서 로그인 후 예매진행을 해 주시기 바랍니다.
+      </li>
+    </ul>
+    <button class="fsw-modal__btn-confirm">확인</button>
+  </div>
+</div>
