@@ -507,6 +507,7 @@ select.fsw__tp-select-boarding-date {
   font-size: 18px;
   height: 35px;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .fsw-modal__btn-reset {
@@ -535,6 +536,23 @@ select.fsw__tp-select-boarding-date {
   font-family: var(--title-font-400);
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .fsw-modal {
+    padding: 30px;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .fsw-modal__container {
+    height: 100%;
+  }
 }
 
 /* 출발지/도착지 */
@@ -632,39 +650,7 @@ select.fsw__tp-select-boarding-date {
   color: var(--gray-text);
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
-  .fsw-modal {
-    padding: 30px;
-  }
-
-  .fsw-modal__airport {
-    height: 500px;
-  }
-
-  .fsw-modal__region-wrap {
-    width: 135px;
-  }
-
-  .fsw-modal__country-airport-wrap {
-    height: 285px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .fsw-modal {
-    padding: 30px;
-    top: 0;
-    left: 0;
-    transform: none;
-    z-index: 99999;
-    height: 100%;
-    width: 100%;
-  }
-
-  .fsw-modal__container {
-    height: 100%;
-  }
-
+@media screen and (max-width: 768px) {
   .fsw-modal__country-airport-wrap {
     flex-grow: 1;
   }
@@ -864,5 +850,97 @@ select.fsw__tp-select-boarding-date {
   .fsw-modal__calendar-group {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+/* 탑승객 */
+.fsw-modal__passenger .fsw-modal__container {
+  gap: 40px;
+}
+
+.fsw-modal__passenger .fsw-modal__header-title {
+  margin-bottom: 0;
+}
+
+.fsw-modal__passenger-form-title {
+  font-size: var(--font-size-24);
+  margin-bottom: 4px;
+}
+
+.fsw-modal__passenger-form-desc {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.fsw-modal__passenger-count-form-wrap {
+  display: flex;
+  gap: 50px;
+}
+
+.fsw-modal__passenger-count-form {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.fsw-modal__passenger-form-desc {
+  font-size: var(--font-size-18);
+  color: var(--gray-text);
+}
+
+.fsw-modal__passenger-input-wrap {
+  display: flex;
+  font-size: var(--font-size-32);
+  border: 1px solid var(--border);
+}
+
+.fsw-modal__btn-passenger {
+  width: 50px;
+}
+
+.fsw-modal__btn-passenger.add,
+.fsw-modal__btn-passenger.decrease {
+  background-color: var(--background);
+}
+
+.fsw-modal__btn-passenger:not(:disabled):hover {
+  background-color: #ccc;
+}
+
+.fsw-modal__btn-passenger:disabled {
+  cursor: auto;
+}
+
+.fsw-modal__passenger-count-num {
+  flex-basis: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.fsw-modal__passenger-desc-item::before {
+  content: "·";
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .fsw-modal__passenger-count-form-wrap {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fsw-modal__passenger .fsw-modal__container {
+    overflow: scroll;
+  }
+
+  .fsw-modal__passenger-count-form-wrap {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .fsw-modal__passenger-count-form {
+    width: 200px;
   }
 }
