@@ -220,4 +220,97 @@ $(".fsw").load("/include/booking-form.html", function () {
   $(".fsw-modal__btn-reset").on("click", function () {
     resetCalendar();
   });
+
+  // modal 열기 - 탑승객
+  $(".fsw__tp-field-area.passenger-count").on("click", function () {
+    $(".fsw-modal__passenger").addClass("is-active");
+    $(".overlay").addClass("is-active");
+  });
+
+  // modal - 탑승객
+  const $adultForm = $("[data-passenger-type=adult]");
+  const $childForm = $("[data-passenger-type=child]");
+  const $infantForm = $("[data-passenger-type=infant]");
+
+  const $adultNumElement = $adultForm.find(".fsw-modal__passenger-count-num");
+  const $childNumElement = $childForm.find(".fsw-modal__passenger-count-num");
+  const $infantNumElement = $infantForm.find(".fsw-modal__passenger-count-num");
+
+  const $addAdultBtn = $adultForm.find(".add");
+  const $decreaseAdultBtn = $adultForm.find(".decrease");
+  const $addChildBtn = $childForm.find(".add");
+  const $decreaseChildBtn = $childForm.find(".decrease");
+  const $addInfantBtn = $infantForm.find(".add");
+  const $decreaseInfantBtn = $infantForm.find(".decrease");
+
+  // 초기 Num값
+  let adultNum = +$adultNumElement.text();
+  let childNum = +$childNumElement.text();
+  let infantNum = +$infantNumElement.text();
+
+  // 버튼 disable 처리 함수
+  function changeDisabled($btn, isDisabled) {
+    $btn
+      .prop("disabled", isDisabled)
+      .css("pointer-events", isDisabled ? "none" : "auto")
+      .css("color", isDisabled ? "var(--gray-text)" : "var(--body-text)");
+  }
+
+  // 각 버튼 상태를 한 번에 갱신하는 함수
+  function refreshButtons() {
+    const totalCount = adultNum + childNum;
+
+    changeDisabled($addAdultBtn, totalCount >= 9);
+    changeDisabled($addChildBtn, totalCount >= 9);
+    changeDisabled($addInfantBtn, adultNum === 0 || infantNum >= adultNum);
+    changeDisabled($decreaseAdultBtn, adultNum === 0);
+    changeDisabled($decreaseChildBtn, childNum === 0);
+    changeDisabled($decreaseInfantBtn, infantNum === 0);
+  }
+
+  // 화면에 숫자 반영 함수
+  function updateDisplay() {
+    $adultNumElement.text(adultNum);
+    $childNumElement.text(childNum);
+    $infantNumElement.text(infantNum);
+  }
+
+  // 버튼 클릭 이벤트 핸들러
+  $(".fsw-modal__btn-passenger").on("click", function () {
+    const $btn = $(this);
+    const type = $btn
+      .closest(".fsw-modal__passenger-count-form")
+      .data("passenger-type");
+    const isAdd = $btn.hasClass("add");
+
+    if (isAdd) {
+      // + 버튼
+      if ((type === "adult" || type === "child") && adultNum + childNum >= 9) {
+        return;
+      }
+      if (type === "infant" && infantNum >= adultNum) {
+        return;
+      }
+
+      if (type === "adult") adultNum++;
+      if (type === "child") childNum++;
+      if (type === "infant") infantNum++;
+    } else {
+      // - 버튼
+      if (type === "adult" && adultNum - 1 < infantNum) {
+        alert("유아가 동반 성인보다 많을 수 없습니다.");
+        return;
+      }
+
+      if (type === "adult" && adultNum > 0) adultNum--;
+      if (type === "child" && childNum > 0) childNum--;
+      if (type === "infant" && infantNum > 0) infantNum--;
+    }
+
+    updateDisplay();
+    refreshButtons();
+  });
+
+  // 초기 상태 세팅
+  refreshButtons();
 });
