@@ -132,3 +132,35 @@
 .swiper-button-next {
   transform: translate(5px, -45%);
 }
+
+/* notice-banner --------------------------------- */
+.notice-banner__container {
+  display: flex;
+  gap: 20px;
+}
+
+.notice-banner__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+  gap: 30px;
+  height: 140px;
+  background-color: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.notice-banner__img {
+  width: 35%;
+}
+
+.notice-banner__text-content.desc {
+  font-size: var(--font-size-20);
+}
+
+.notice-banner__text-content.title {
+  font-family: var(--title-font-400);
+  font-size: var(--font-size-32);
+}
