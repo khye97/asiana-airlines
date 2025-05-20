@@ -28,6 +28,16 @@
   .additional-services__btn {
     height: 80px;
   }
+
+  /* partnership-services ------------------- */
+  .partnership-services__btn {
+    grid-column: span 2;
+    height: 80px;
+  }
+
+  .partnership-services__btn-content {
+    font-size: var(--font-size-18);
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -66,6 +76,16 @@
   }
 
   .additional-services__btn-content {
+    font-size: var(--font-size-18);
+  }
+
+  /* partnership-services ------------------- */
+  .partnership-services__btn {
+    grid-column: span 2;
+    height: 80px;
+  }
+
+  .partnership-services__btn-content {
     font-size: var(--font-size-18);
   }
 }
@@ -120,5 +140,14 @@
 
   .additional-services__btn-content {
     font-size: var(--font-size-16);
+  }
+
+  /* partnership-services ------------------- */
+  .partnership-services__btn {
+    grid-column: span 3;
+  }
+
+  .partnership-services__btn-content {
+    font-size: var(--font-size-18);
   }
 }
