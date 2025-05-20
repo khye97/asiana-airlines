@@ -944,3 +944,88 @@ select.fsw__tp-select-boarding-date {
     width: 200px;
   }
 }
+
+/* 좌석 등급 선택 */
+.fsw-modal__seat-grade-form-wrap {
+  margin-bottom: 10px;
+}
+
+.fsw-modal__seat-grade-form-title {
+  font-size: var(--font-size-24);
+  margin-bottom: 10px;
+}
+
+.fsw-modal__seat-grade-btn-group {
+  display: flex;
+  gap: 15px;
+}
+
+.fsw-modal__seat-grade-btn-option {
+  flex-grow: 1;
+  flex-basis: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  height: 50px;
+  font-size: var(--font-size-18);
+}
+
+.fsw-modal__seat-grade-btn-option.is-selected {
+  border-color: var(--red);
+}
+
+.fsw-modal__seat-grade-btn-option i {
+  font-size: var(--font-size-20);
+  color: var(--red);
+}
+
+.fsw-modal__seat-grade-checkbox-group {
+  display: flex;
+  gap: 30px;
+}
+
+.fsw-modal__seat-grade-checkbox-wrap {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fsw-modal__seat-grade-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--blue);
+}
+
+.fsw-modal__seat-grade-checkbox-desc {
+  font-size: var(--font-size-16);
+}
+
+.fsw-modal__seat-grade-desc {
+  display: none;
+}
+
+[data-flight-type="return"] {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .fsw-modal__seat-grade .fsw-modal__container {
+    overflow: scroll;
+  }
+
+  .fsw-modal__seat-grade-btn-group {
+    flex-wrap: wrap;
+  }
+
+  .fsw-modal__seat-grade-btn-option {
+    flex-grow: 0;
+  }
+
+  .fsw-modal__seat-grade-checkbox-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
