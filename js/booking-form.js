@@ -125,21 +125,23 @@ $(".fsw").load("/include/booking-form.html", function () {
 
   // calendar --------------------------------------------------------------------
   // modal 열기 - calendar
-  $(".fsw__tp-field-area.departure-date, .fsw__tp-field-area.return-date").on(
-    "click",
-    function () {
-      $(".fsw-modal__calendar").addClass("is-active");
-      $(".overlay").addClass("is-active");
+  $(
+    ".fsw__tp-field-area.departure-date, .fsw__tp-field-area.return-date, .boarding-date"
+  ).on("click", function () {
+    $(".fsw-modal__calendar").addClass("is-active");
+    $(".overlay").addClass("is-active");
 
-      if ($(this).data("trip") === "round-trip") {
-        $(".fsw-modal__return-date").css("display", "inline-block");
-        $(".fsw-modal__calendar").attr("data-calendar-type", "round-trip");
-      } else {
-        $(".fsw-modal__return-date").css("display", "none");
-        $(".fsw-modal__calendar").attr("data-calendar-type", "one-way");
-      }
+    if (
+      $(this).data("trip") === "round-trip" ||
+      $(this).data("trip") === "boarding-date"
+    ) {
+      $(".fsw-modal__return-date").css("display", "inline-block");
+      $(".fsw-modal__calendar").attr("data-calendar-type", "round-trip");
+    } else {
+      $(".fsw-modal__return-date").css("display", "none");
+      $(".fsw-modal__calendar").attr("data-calendar-type", "one-way");
     }
-  );
+  });
 
   let fromDayIndex;
   let returnDayIndex;
