@@ -1,4 +1,9 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* section-title */
+  .section-title {
+    font-size: 35px;
+  }
+
   /* notice-banner ------------------- */
   .notice-banner__group {
     height: 110px;
@@ -14,9 +19,23 @@
   .notice-banner__text-content.title {
     font-size: var(--font-size-24);
   }
+
+  /* additional-services -------------- */
+  .additional-services__btn-content {
+    font-size: var(--font-size-18);
+  }
+
+  .additional-services__btn {
+    height: 80px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
+  /* section-title */
+  .section-title {
+    font-size: 30px;
+  }
+
   /* notice-banner --------------------- */
   .notice-banner__container {
     flex-direction: column;
@@ -39,9 +58,24 @@
   .notice-banner__text-content.title {
     font-size: var(--font-size-24);
   }
+
+  /* additional-services -------------- */
+  .additional-services__btn {
+    grid-column: span 2;
+    height: 80px;
+  }
+
+  .additional-services__btn-content {
+    font-size: var(--font-size-18);
+  }
 }
 
 @media screen and (max-width: 576px) {
+  /* section-title */
+  .section-title {
+    font-size: 30px;
+  }
+
   /* main-slider -------------------- */
   .main-slider__content-category {
     font-size: var(--font-size-16);
@@ -77,5 +111,14 @@
 
   .notice-banner__text-content.title {
     font-size: var(--font-size-20);
+  }
+
+  /* additional-services -------------- */
+  .additional-services__btn {
+    grid-column: span 2;
+  }
+
+  .additional-services__btn-content {
+    font-size: var(--font-size-16);
   }
 }
