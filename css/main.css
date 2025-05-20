@@ -180,7 +180,6 @@ section {
 
 /* additional-services ------------------- */
 .additional-services__btn-group {
-  /* display: flex; */
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
@@ -188,8 +187,6 @@ section {
 
 .additional-services__btn {
   grid-column: span 1;
-  /* flex-basis: 0;
-  flex-grow: 1; */
   height: 90px;
   background-color: var(--background-blue);
   border-radius: 8px;
@@ -211,5 +208,38 @@ section {
 }
 
 .additional-services__btn-content {
+  font-size: var(--font-size-20);
+}
+
+/* partnership-services ------------------- */
+.partnership-services__btn-group {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.partnership-services__btn {
+  grid-column: span 1;
+  height: 90px;
+  background-color: var(--background-blue);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  word-break: keep-all;
+  padding: 0 15px;
+  transition: background 200ms;
+}
+
+.partnership-services__btn:hover {
+  background-color: var(--background-blue-hover);
+}
+
+.partnership-services .material-symbols-outlined {
+  font-size: 40px;
+}
+
+.partnership-services__btn-content {
   font-size: var(--font-size-20);
 }
