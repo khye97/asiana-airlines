@@ -2622,3 +2622,109 @@
     <button class="fsw-modal__btn-confirm">확인</button>
   </div>
 </div>
+
+<div class="fsw-modal fsw-modal__seat-grade">
+  <div class="fsw-modal__container">
+    <button class="fsw-modal__close">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="fsw-modal__header">
+      <h3 class="fsw-modal__header-title">좌석 등급 선택</h3>
+    </div>
+    <div class="fsw-modal__seat-grade-form-wrap" data-flight-type="round-trip">
+      <div class="fsw-modal__seat-grade-form-title">출도착 편</div>
+      <div class="fsw-modal__seat-grade-btn-group">
+        <button
+          class="fsw-modal__seat-grade-btn-option is-selected"
+          data-seat-grade="economy-sale"
+        >
+          <i class="bi bi-check-lg"></i>
+          이코노미 특가
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="economy-standard"
+        >
+          이코노미 일반
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="business"
+        >
+          비즈니스
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="first"
+        >
+          퍼스트
+        </button>
+      </div>
+    </div>
+    <div class="fsw-modal__seat-grade-form-wrap" data-flight-type="return">
+      <div class="fsw-modal__seat-grade-form-title">오는 편</div>
+      <div class="fsw-modal__seat-grade-btn-group">
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="economy-sale"
+        >
+          이코노미 특가
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option is-selected"
+          data-seat-grade="economy-standard"
+        >
+          <i class="bi bi-check-lg"></i>
+          이코노미 일반
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="business"
+        >
+          비즈니스
+        </button>
+        <button
+          class="fsw-modal__seat-grade-btn-option"
+          data-seat-grade="first"
+        >
+          퍼스트
+        </button>
+      </div>
+    </div>
+    <div class="fsw-modal__seat-grade-checkbox-group">
+      <div
+        class="fsw-modal__seat-grade-checkbox-wrap"
+        data-checkbox-type="upgrade-only"
+      >
+        <input
+          type="checkbox"
+          id="upgrade-only"
+          class="fsw-modal__seat-grade-checkbox"
+        />
+        <label for="upgrade-only" class="fsw-modal__seat-grade-checkbox-desc"
+          >좌석 승급 가능한 운임만 조회</label
+        >
+      </div>
+      <div
+        class="fsw-modal__seat-grade-checkbox-wrap"
+        data-checkbox-type="separate-round-trip"
+      >
+        <input
+          type="checkbox"
+          id="separate-round-trip"
+          class="fsw-modal__seat-grade-checkbox"
+        />
+        <label
+          for="separate-round-trip"
+          class="fsw-modal__seat-grade-checkbox-desc"
+          >출도착편 다른 좌석 등급 선택</label
+        >
+      </div>
+    </div>
+    <p class="fsw-modal__seat-grade-desc">
+      * 마일리지 좌석승급을 위해서는, 사전에 예약센터를 통해 승급가능한 비즈니스
+      클래스 잔여좌석을 확인하신 후 예매를 진행하시기 바랍니다.
+    </p>
+    <button class="fsw-modal__btn-confirm">확인</button>
+  </div>
+</div>
