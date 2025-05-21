@@ -50,11 +50,11 @@
     <main class="main">
       <section class="main-slider">
         <div class="main-slider__container">
-          <div class="main-slider__content-group swiper">
+          <div class="main-slider__slide-list swiper">
             <div class="swiper-wrapper">
               <a
                 href="#none"
-                class="swiper-slide main-slider__content"
+                class="swiper-slide main-slider__slide-item"
                 style="
                   background: url(/image/main-banner-01.jpg) no-repeat center /
                     cover;
@@ -72,7 +72,7 @@
               </a>
               <a
                 href="#none"
-                class="swiper-slide main-slider__content"
+                class="swiper-slide main-slider__slide-item"
                 style="
                   background: url(/image/main-banner-02.jpg) no-repeat center /
                     cover;
@@ -88,7 +88,7 @@
               </a>
               <a
                 href="#none"
-                class="swiper-slide main-slider__content"
+                class="swiper-slide main-slider__slide-item"
                 style="
                   background: url(/image/main-banner-03.jpg) no-repeat center
                     30% / cover;
@@ -106,7 +106,7 @@
               </a>
               <a
                 href="#none"
-                class="swiper-slide main-slider__content"
+                class="swiper-slide main-slider__slide-item"
                 style="
                   background: url(/image/main-banner-04.jpg) no-repeat center
                     30% / cover;
@@ -175,7 +175,9 @@
       <section class="additional-services">
         <div class="inner">
           <div class="additional-services__container">
-            <h1 class="section-title">부가서비스</h1>
+            <div class="section-title-wrap">
+              <h1 class="section-title">부가서비스</h1>
+            </div>
             <div class="additional-services__btn-group">
               <button
                 class="additional-services__btn"
@@ -220,11 +222,242 @@
         </div>
       </section>
 
+      <!-- flight-deals -->
+      <section class="flight-deals">
+        <div class="inner">
+          <div class="flight-deals__container">
+            <div class="section-title-wrap">
+              <h1 class="section-title">추천 항공권</h1>
+              <p class="section-desc">
+                가장 빨리, 가장 싸게 떠날 수 있는 항공권을 추천해드려요.
+              </p>
+            </div>
+            <div class="flight-deals__slide-list swiper">
+              <div class="swiper-wrapper">
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-osaka.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >부산(PUS)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination"
+                        >오사카/간사이(KIX)</span
+                      >
+                    </div>
+                    <div class="flight-deals__price">KRW 55,500</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.16 (수)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-fukuoka.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination"
+                        >후쿠오카(FUK)</span
+                      >
+                    </div>
+                    <div class="flight-deals__price">KRW 60,500</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.15 (화)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-hongkong.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination">홍콩(HKG)</span>
+                    </div>
+                    <div class="flight-deals__price">KRW 76,300</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.16 (수)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-bohol.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination">보홀(TAG)</span>
+                    </div>
+                    <div class="flight-deals__price">KRW 82,800</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.16 (수)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-guam.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination">괌(GUM)</span>
+                    </div>
+                    <div class="flight-deals__price">KRW 114,800</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.15 (화)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-ulaanbaatar.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >부산(PUS)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination"
+                        >울란바토르(UBN)</span
+                      >
+                    </div>
+                    <div class="flight-deals__price">KRW 116,300</div>
+                    <div class="flight-deals__departure-date">
+                      2025.05.22 (목)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-zhengzhou.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination">정저우(CGO)</span>
+                    </div>
+                    <div class="flight-deals__price">KRW 134,800</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.16 (수)
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="flight-deals__slide-item swiper-slide">
+                  <span class="flight-deals__badge">편도 총액</span>
+                  <div class="flight-deals__image-wrap">
+                    <img
+                      src="/image/recommended-flights-shanghai.jpg"
+                      alt=""
+                      class="flight-deals__img"
+                    />
+                  </div>
+                  <div class="flight-deals__content-wrap">
+                    <div class="flight-deals__origin-destination">
+                      <span class="flight-deals__origin"
+                        >서울/인천(ICN)
+                        <span class="material-symbols-outlined">
+                          east
+                        </span></span
+                      >
+                      <span class="flight-deals__destination">상하이(PVG)</span>
+                    </div>
+                    <div class="flight-deals__price">KRW 150,700</div>
+                    <div class="flight-deals__departure-date">
+                      2025.04.17 (목)
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="flight-deals__pagination-group">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- partnership-services -->
       <section class="partnership-services">
         <div class="inner">
           <div class="partnership-services__container">
-            <h1 class="section-title">제휴서비스</h1>
+            <div class="section-title-wrap">
+              <h1 class="section-title">제휴서비스</h1>
+            </div>
             <div class="partnership-services__btn-group">
               <button
                 class="partnership-services__btn"
