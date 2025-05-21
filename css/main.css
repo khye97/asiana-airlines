@@ -28,11 +28,18 @@ section {
   margin-bottom: 80px;
 }
 
-/* section-title */
+.section-title-wrap {
+  margin-bottom: 24px;
+}
+
 .section-title {
   font-family: var(--title-font-400);
   font-size: var(--section-title);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: var(--font-size-18);
 }
 
 /* main-slider ----------------------------------------- */
@@ -48,11 +55,11 @@ section {
   height: 100%;
 }
 
-.main-slider__content-group {
+.main-slider__slide-list {
   height: 100%;
 }
 
-.main-slider__content {
+.main-slider__slide-item {
   height: 100%;
   position: relative;
   display: flex;
@@ -60,7 +67,7 @@ section {
   word-break: keep-all;
 }
 
-.main-slider__content::before {
+.main-slider__slide-item::before {
   content: "";
   position: absolute;
   right: 0;
@@ -111,7 +118,7 @@ section {
   z-index: 10;
 }
 
-.swiper-pagination {
+.main-slider .swiper-pagination {
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);
@@ -123,14 +130,14 @@ section {
   color: var(--white);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.main-slider .swiper-button-prev::after,
+.main-slider .swiper-button-next::after {
   font-size: 20px;
   color: var(--white);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.main-slider .swiper-button-prev,
+.main-slider .swiper-button-next {
   top: 50%;
   transform: translateY(-45%);
   height: 100%;
@@ -138,11 +145,11 @@ section {
   margin-top: 0;
 }
 
-.swiper-button-prev {
+.main-slider .swiper-button-prev {
   transform: translate(-5px, -45%);
 }
 
-.swiper-button-next {
+.main-slider .swiper-button-next {
   transform: translate(5px, -45%);
 }
 
@@ -209,6 +216,98 @@ section {
 
 .additional-services__btn-content {
   font-size: var(--font-size-20);
+}
+
+/* flight-deals -------------------------- */
+.flight-deals__slide-list {
+  padding: 2px 5px 12px 5px;
+}
+
+.flight-deals__slide-item {
+  position: relative;
+  border: 1px solid rgba(var(--border), 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow, 200ms;
+}
+
+.flight-deals__slide-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flight-deals__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 2px 7px;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+}
+
+.flight-deals__image-wrap {
+  width: 100%;
+  height: 250px;
+}
+
+.flight-deals__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flight-deals__content-wrap {
+  padding: 20px;
+}
+
+.flight-deals__origin-destination {
+  margin-bottom: 12px;
+}
+
+.flight-deals__origin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-16);
+  color: var(--gray-text);
+  margin-bottom: 4px;
+}
+
+.flight-deals__origin .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.flight-deals__destination {
+  font-family: var(--title-font-500);
+  font-size: var(--font-size-20);
+}
+
+.flight-deals__price {
+  font-size: var(--font-size-20);
+  margin-bottom: 4px;
+}
+
+.flight-deals__departure-date {
+  font-size: var(--font-size-16);
+  color: var(--gray-text);
+}
+
+/* flight-deals swiper */
+.flight-deals .swiper-button-prev,
+.flight-deals .swiper-button-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.flight-deals .swiper-button-prev::after,
+.flight-deals .swiper-button-next::after {
+  font-size: 25px;
+  color: var(--white);
 }
 
 /* partnership-services ------------------- */
