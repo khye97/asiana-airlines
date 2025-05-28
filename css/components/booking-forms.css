@@ -798,11 +798,11 @@ select.fsw__tp-select-boarding-date {
 }
 
 /* tooltip */
-[data-tooltip] {
+.fsw-modal__calendar--today[data-tooltip] {
   position: relative;
 }
 
-[data-tooltip]:hover::before {
+.fsw-modal__calendar--today[data-tooltip]:hover::before {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 115%;
@@ -819,7 +819,7 @@ select.fsw__tp-select-boarding-date {
   text-align: center;
 }
 
-[data-tooltip]:hover::after {
+.fsw-modal__calendar--today[data-tooltip]:hover::after {
   content: "";
   position: absolute;
   bottom: 93%;
