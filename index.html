@@ -41,7 +41,6 @@
     <link rel="stylesheet" href="/css/components/button.css" />
     <link rel="stylesheet" href="/css/components/card.css" />
     <link rel="stylesheet" href="/css/components/booking-forms.css" />
-    <link rel="stylesheet" href="/css/components/flight-price-chart.css" />
   </head>
   <body>
     <!-- header -->
@@ -171,7 +170,7 @@
         </div>
       </section>
 
-      <!-- additional-services -->
+      <!-- additional-services (부가서비스) -->
       <section class="additional-services">
         <div class="inner">
           <div class="additional-services__container">
@@ -222,7 +221,7 @@
         </div>
       </section>
 
-      <!-- flight-deals -->
+      <!-- flight-deals (추천 항공권) -->
       <section class="flight-deals">
         <div class="inner">
           <div class="flight-deals__container">
@@ -451,7 +450,320 @@
         </div>
       </section>
 
-      <!-- partnership-services -->
+      <!-- mfc: monthly-fare-chart (가격 차트) -->
+      <section class="mfc">
+        <div class="inner">
+          <div class="mfc__container">
+            <div class="section-title-wrap">
+              <h1 class="section-title">한눈에 보는 항공권 가격</h1>
+              <p class="section-desc">
+                한국인에게 가장 사랑받는 여행지,<br />
+                오늘부터 한 달간 가장 저렴한 날을 확인해보세요.
+              </p>
+            </div>
+            <div class="mfc__content-wrap">
+              <div class="mfc__content-header">
+                <div class="mfc__t-group">
+                  <button class="mfc__t is-selected" data-chart="osaka">
+                    오사카
+                  </button>
+                  <button class="mfc__t" data-chart="bangkok">방콕</button>
+                  <button class="mfc__t" data-chart="taipei">타이베이</button>
+                  <button class="mfc__t" data-chart="paris">파리</button>
+                </div>
+                <p class="mfc__header-desc">
+                  서울/인천 출발, 편도,이코노미 특가, 성인 1인 기준
+                </p>
+              </div>
+              <div class="mfc__content-body">
+                <div class="mfc__tp-group">
+                  <div class="mfc__tp" data-chart="osaka">
+                    <div class="mfc__tp-scroll">
+                      <div class="mfc__chart-item-wrap">
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-06"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/06</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-07"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/07</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-08"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/08</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-09"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/09</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item lowest-price"
+                          data-chart-date="2025-05-10"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/10</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-11"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/11</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-12"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/12</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-13"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/13</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-14"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/14</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-15"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/15</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-16"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/16</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-17"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/17</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-18"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/18</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-19"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/19</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-20"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/20</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-21"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/21</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-22"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/22</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-23"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/23</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-24"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/24</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-25"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/25</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-26"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/26</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-27"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/27</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-28"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/28</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-29"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/29</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-30"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/30</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-05-31"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">05/31</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-06-01"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">06/01</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-06-02"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">06/02</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-06-03"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">06/03</span>
+                        </div>
+                        <div
+                          class="mfc__chart-item"
+                          data-chart-date="2025-06-04"
+                        >
+                          <div class="mfc__chart-bar">
+                            <div class="mfc__chart-bar-fill"></div>
+                          </div>
+                          <span class="mfc__chart-date">06/04</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tooltip-layer">
+                      <div class="tooltip"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- partnership-services (부가서비스) -->
       <section class="partnership-services">
         <div class="inner">
           <div class="partnership-services__container">
