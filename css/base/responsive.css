@@ -29,6 +29,12 @@
     height: 80px;
   }
 
+  /* mfc: monthly-fare-chart -------------- */
+  .mfc__content-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   /* partnership-services ------------------- */
   .partnership-services__btn {
     grid-column: span 2;
@@ -83,6 +89,16 @@
 
   .additional-services__btn-content {
     font-size: var(--font-size-18);
+  }
+
+  /* mfc: monthly-fare-chart -------------- */
+  .mfc__content-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mfc__content-wrap {
+    padding: 25px 30px;
   }
 
   /* partnership-services ------------------- */
@@ -152,6 +168,29 @@
 
   .additional-services__btn-content {
     font-size: var(--font-size-16);
+  }
+
+  /* mfc: monthly-fare-chart -------------- */
+  .mfc__content-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mfc__t-group {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .mfc__t {
+    font-size: var(--font-size-16);
+  }
+
+  .mfc__header-desc {
+    font-size: var(--font-size-14);
+  }
+
+  .mfc__content-wrap {
+    padding: 25px 30px;
   }
 
   /* partnership-services ------------------- */
