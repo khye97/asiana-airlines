@@ -310,6 +310,155 @@ section {
   color: var(--white);
 }
 
+/* mfc: monthly-fare-chart ---------------- */
+.mfc__content-wrap {
+  padding: 35px 45px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.mfc__content-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mfc__t-group {
+  display: flex;
+  gap: 50px;
+}
+
+.mfc__t {
+  position: relative;
+  font-size: var(--font-size-20);
+  color: var(--gray-text);
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+.mfc__t.is-selected {
+  color: var(--body-text);
+}
+
+.mfc__t.is-selected::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--red);
+}
+
+.mfc__header-desc {
+  font-size: var(--font-size-16);
+  color: var(--gray-text);
+}
+
+.mfc__tp {
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.mfc__tp-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.mfc__chart-item-wrap {
+  position: relative;
+  display: inline-flex;
+  gap: calc(5.5px);
+}
+
+.mfc__chart-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+.mfc__chart-bar {
+  position: relative;
+  width: 20px;
+  height: 120px;
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+.mfc__chart-bar-fill {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 30px;
+  background-color: var(--gray-text);
+  border-radius: 50px;
+  transition: height 200ms;
+}
+
+.mfc__chart-item.lowest-price .mfc__chart-bar-fill {
+  background-color: var(--red);
+}
+
+.tooltip-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.tooltip {
+  position: fixed;
+  width: 140px;
+  background-color: var(--tooltip-color);
+  color: var(--white);
+  font-size: 16px;
+  z-index: var(--tooltip);
+  height: 30px;
+  border-radius: 50px;
+  line-height: 30px;
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, 30px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--tooltip-color) transparent transparent transparent;
+  opacity: 1;
+}
+
+.tooltip.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.lowest-price .mfc__chart-date {
+  color: var(--body-text);
+}
+
+.mfc__chart-date {
+  color: var(--gray-text);
+  font-size: 12px;
+}
+
 /* partnership-services ------------------- */
 .partnership-services__btn-group {
   display: grid;
