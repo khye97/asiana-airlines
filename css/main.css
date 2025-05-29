@@ -459,6 +459,100 @@ section {
   font-size: 12px;
 }
 
+/* recommended-city ----------------------- */
+.recommended-city__content-wrap {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+.recommended-city__content-item {
+  position: relative;
+  flex: 1 1 0%;
+  transition: all 300ms;
+  overflow: hidden;
+  border-right: 3px solid var(--white);
+}
+
+.recommended-city__content-item:last-child {
+  border-right: none;
+}
+
+.recommended-city__content-item:hover {
+  flex: 1 1 40%;
+}
+
+.recommended-city__content-item:hover .recommended-city__text-wrap {
+  transform: translateY(0);
+}
+
+.recommended-city__content-item:hover .recommended-city__city-desc,
+.recommended-city__content-item:hover .recommended-city__btn-booking {
+  opacity: 1;
+}
+
+.recommended-city__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.recommended-city__image-wrap::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(17, 17, 17, 0.7) 0%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.recommended-city__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommended-city__text-wrap {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  color: var(--white);
+  z-index: 10;
+  transform: translateY(90px);
+  transition: all 200ms;
+}
+
+.recommended-city__city-name {
+  font-family: var(--title-font-400);
+  font-size: var(--font-size-32);
+  margin-bottom: 4px;
+}
+
+.recommended-city__city-desc {
+  font-size: var(--font-size-18);
+  margin-bottom: 20px;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.recommended-city__btn-booking {
+  width: 130px;
+  height: 35px;
+  border-radius: 8px;
+  border: 2px solid var(--white);
+  font-size: var(--font-size-16);
+  color: var(--white);
+  opacity: 0;
+  transition: all 200ms;
+}
+
+.recommended-city__btn-booking:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
 /* partnership-services ------------------- */
 .partnership-services__btn-group {
   display: grid;
