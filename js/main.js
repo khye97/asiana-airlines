@@ -346,3 +346,49 @@ $(document).on("mouseleave", ".mfc__chart-item", function () {
     $tooltip.remove();
   }, 300);
 });
+
+// faq -----------------------------------------
+$(".faq__answer").slideUp();
+
+$(".faq__question").on("click", function () {
+  let $allQuestion = $(".faq__question");
+  let $answer = $(this).next(".faq__answer");
+  let $chevron = $(this).children("i");
+  let $allAnswer = $(".faq__answer");
+  let $allChevron = $(".faq__question").children("i");
+
+  // 숨겨져 있는 경우: 열 때
+  if ($answer.is(":hidden")) {
+    $allAnswer.slideUp(200).css({
+      borderColor: "var(--border)",
+    });
+    $allChevron.css({
+      transform: "rotate(0deg)",
+    });
+    $allQuestion.css({
+      borderColor: "var(--border)",
+    });
+    $answer.slideDown(200);
+    $chevron.css({
+      transform: "rotate(180deg)",
+    });
+    $(this).css({
+      borderColor: "var(--body-text)",
+    });
+    $answer.css({
+      borderColor: "var(--body-text)",
+    });
+  } else {
+    // 닫을 때
+    $answer.slideUp(200);
+    $chevron.css({
+      transform: "rotate(0deg)",
+    });
+    $(this).css({
+      borderColor: "var(--border)",
+    });
+    $answer.css({
+      borderColor: "var(--border)",
+    });
+  }
+});
