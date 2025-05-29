@@ -29,10 +29,18 @@
     height: 80px;
   }
 
-  /* mfc: monthly-fare-chart -------------- */
-  .mfc__content-header {
-    flex-direction: column;
-    gap: 15px;
+  /* recommended-city ----------------------- */
+  .recommended-city__content-item {
+    flex: 0 0 50%;
+  }
+
+  .recommended-city__content-item:last-child {
+    flex-basis: 100%;
+    border: 2px solid var(--white);
+  }
+
+  .recommended-city__content-item:hover {
+    flex: 0 0 50%;
   }
 
   /* partnership-services ------------------- */
@@ -40,24 +48,9 @@
     grid-column: span 2;
     height: 80px;
   }
-
-  .partnership-services__btn-content {
-    font-size: var(--font-size-18);
-  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-  /* section-title */
-  .section-title {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .section-desc {
-    font-size: var(--font-size-16);
-    margin-bottom: 16px;
-  }
-
   /* notice-banner --------------------- */
   .notice-banner__container {
     flex-direction: column;
@@ -91,14 +84,18 @@
     font-size: var(--font-size-18);
   }
 
-  /* mfc: monthly-fare-chart -------------- */
-  .mfc__content-header {
-    flex-direction: column;
-    gap: 15px;
+  /* recommended-city ----------------------- */
+  .recommended-city__content-item {
+    flex: 0 0 50%;
   }
 
-  .mfc__content-wrap {
-    padding: 25px 30px;
+  .recommended-city__content-item:last-child {
+    flex-basis: 100%;
+    border: 2px solid var(--white);
+  }
+
+  .recommended-city__content-item:hover {
+    flex: 0 0 50%;
   }
 
   /* partnership-services ------------------- */
@@ -106,24 +103,9 @@
     grid-column: span 2;
     height: 80px;
   }
-
-  .partnership-services__btn-content {
-    font-size: var(--font-size-18);
-  }
 }
 
 @media screen and (max-width: 576px) {
-  /* section-title */
-  .section-title {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-
-  .section-desc {
-    font-size: var(--font-size-16);
-    margin-bottom: 16px;
-  }
-
   /* main-slider -------------------- */
   .main-slider__content-category {
     font-size: var(--font-size-16);
@@ -171,11 +153,6 @@
   }
 
   /* mfc: monthly-fare-chart -------------- */
-  .mfc__content-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .mfc__t-group {
     flex-wrap: wrap;
     gap: 20px;
@@ -189,16 +166,88 @@
     font-size: var(--font-size-14);
   }
 
-  .mfc__content-wrap {
-    padding: 25px 30px;
+  /* recommended-city ----------------------- */
+  .recommended-city__content-item {
+    flex: 0 0 100%;
+  }
+
+  .recommended-city__content-item:hover {
+    flex: 0 0 100%;
   }
 
   /* partnership-services ------------------- */
   .partnership-services__btn {
     grid-column: span 3;
   }
+}
 
+/* 1024px 이하 스타일이 전부 동일한 경우 */
+@media screen and (max-width: 1024px) {
+  /* mfc: monthly-fare-chart */
+  .mfc__content-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* recommended-city */
+  .recommended-city__content-wrap {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .recommended-city__content-item {
+    height: 300px;
+    border: 2px solid var(--white);
+  }
+
+  .recommended-city__content-item:last-child:hover {
+    flex-basis: 100%;
+  }
+
+  .recommended-city__image-wrap::before {
+    background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.7) 0%,
+      transparent 80%
+    );
+  }
+
+  .recommended-city__text-wrap {
+    transform: translateY(0);
+  }
+
+  .recommended-city__city-desc,
+  .recommended-city__btn-booking {
+    opacity: 1;
+  }
+
+  .recommended-city__city-desc {
+    font-size: var(--font-size-16);
+    white-space: wrap;
+    word-break: keep-all;
+  }
+
+  /* partnership-services */
   .partnership-services__btn-content {
     font-size: var(--font-size-18);
+  }
+}
+
+/* 768px 이하 스타일이 전부 동일한 경우 */
+@media screen and (max-width: 768px) {
+  /* section-title */
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .section-desc {
+    font-size: var(--font-size-16);
+    margin-bottom: 16px;
+  }
+
+  /* mfc: monthly-fare-chart */
+  .mfc__content-wrap {
+    padding: 25px 30px;
   }
 }
