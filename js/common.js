@@ -129,3 +129,43 @@ $("header").load("/include/header.html", function () {
     }
   });
 });
+
+// footer ------------------------------------------------------
+$("footer").load("/include/footer.html", function () {
+  $(".footer__menu-title").on("click", function () {
+    let $menu = $(this).next(".footer__menu-list");
+    let $chevron = $(this).children("i");
+    let $allMenu = $(".footer__menu-list");
+    let $allChevron = $(".footer__menu-title").children("i");
+
+    // 숨겨져 있는 경우: 열 때
+    if ($menu.is(":hidden")) {
+      $allMenu.slideUp(200);
+      $allChevron.css({
+        transform: "rotate(0deg)",
+      });
+      $menu.slideDown(200);
+      $chevron.css({
+        transform: "rotate(180deg)",
+      });
+    } else {
+      // 닫을 때
+      $menu.slideUp(200);
+      $chevron.css({
+        transform: "rotate(0deg)",
+      });
+    }
+  });
+
+  $(window)
+    .resize(function () {
+      if (window.matchMedia("screen and (max-width: 1024px)").matches) {
+        $(".footer__menu-list").slideUp();
+      } else {
+        $(".footer__menu-list").css({
+          display: "block",
+        });
+      }
+    })
+    .resize();
+});
