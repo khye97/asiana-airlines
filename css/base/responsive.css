@@ -179,6 +179,11 @@
   .partnership-services__btn {
     grid-column: span 3;
   }
+
+  /* notice-board -------------------------- */
+  .notice-board__content-date {
+    display: none;
+  }
 }
 
 /* 1024px 이하 스타일이 전부 동일한 경우 */
@@ -248,6 +253,11 @@
 
   /* mfc: monthly-fare-chart */
   .mfc__content-wrap {
+    padding: 25px 30px;
+  }
+
+  /* notice-board */
+  .notice-board__content-wrap {
     padding: 25px 30px;
   }
 }
