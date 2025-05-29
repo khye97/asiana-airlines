@@ -1,0 +1,140 @@
+.footer {
+  background-color: var(--footer);
+  color: var(--white);
+  padding: 80px 0;
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+}
+
+.footer__logo img {
+  width: 200px;
+  filter: invert(99%) sepia(16%) saturate(0%) hue-rotate(131deg)
+    brightness(109%) contrast(100%);
+}
+
+.footer__menus-sns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer__menus {
+  display: flex;
+  gap: 60px;
+}
+
+.footer__menu-title {
+  font-size: var(--font-size-16);
+}
+
+.footer__menu-title span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer__menu-title i {
+  display: none;
+  transition: all 200ms;
+}
+
+.footer__menu-item {
+  text-decoration-color: var(--gray-text);
+  padding-bottom: 4px;
+}
+
+.footer__menu-item:hover {
+  text-decoration-line: underline;
+}
+
+.footer__menu-item a {
+  font-size: var(--font-size-14);
+  color: var(--gray-text);
+}
+
+.footer__sns-link-wrap {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__sns-link i {
+  display: block;
+  font-size: var(--font-size-24);
+  color: var(--white);
+  transition: all 200ms;
+}
+
+.footer__sns-link.youtube i {
+  font-size: 28px;
+  transform: translateY(-3px);
+}
+
+.footer__sns-link.youtube:hover i {
+  color: var(--youtube);
+}
+
+.footer__sns-link.instagram:hover i {
+  color: var(--instagram);
+}
+
+.footer__sns-link.facebook:hover i {
+  color: var(--facebook);
+}
+
+.footer__sns-link.twitter-x:hover i {
+  color: var(--twitter-x);
+}
+
+.footer__company-info {
+  color: var(--gray-text);
+  margin-bottom: 40px;
+  font-size: var(--font-size-14);
+}
+
+.footer__company-info-title {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.footer__copyright {
+  color: var(--gray-text);
+  font-size: var(--font-size-14);
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 60px 0;
+  }
+
+  .footer__menus {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer__menu-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-text);
+    padding: 10px 0;
+  }
+
+  .footer__menu-title span {
+    margin-bottom: 0;
+  }
+
+  .footer__menu-title i {
+    display: block;
+  }
+
+  .footer__menu-list {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-text);
+  }
+
+  .footer__menus-sns {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
