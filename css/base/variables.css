@@ -10,16 +10,20 @@
   --background: #ededed;
   --background-blue: #eef5ff;
   --background-blue-hover: #d6e7ff;
+  --footer: #252523;
+
+  /* tooltip */
+  --tooltip-color: #111111;
 
   /* day */
   --sunday: #f15928;
   --saturday: #0372ff;
 
   /* sns */
-  --footer-black: #252523;
   --facebook: #4267b2;
   --youtube: #ff0000;
   --instagram: #8134af;
+  --twitter-x: #000000;
 
   /* box-shadow */
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,10 +35,10 @@
   --section-title-margin: 24px;
 
   /* z-index */
-  --header: 99;
-  --mobile-gnb: 999;
-  --overlay: 999;
-  --header-overlay: 9;
-  --modal: 9999;
-  --tooltip: 999;
+  --header: 9999;
+  --mobile-gnb: 9999;
+  --overlay: 99999;
+  --header-overlay: 99;
+  --modal: 999999;
+  --tooltip: 99;
 }
