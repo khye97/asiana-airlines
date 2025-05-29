@@ -42,6 +42,15 @@ section {
   font-size: var(--font-size-18);
 }
 
+.btn-view-all {
+  font-size: var(--font-size-16);
+  align-self: flex-end;
+}
+
+.btn-view-all:hover {
+  text-decoration: underline;
+}
+
 /* main-slider ----------------------------------------- */
 .swiper {
   z-index: 0;
@@ -584,4 +593,41 @@ section {
 
 .partnership-services__btn-content {
   font-size: var(--font-size-20);
+}
+
+/* notice-board --------------------------- */
+.notice-board .section-title-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notice-board .section-title {
+  margin-bottom: 0;
+}
+
+.notice-board__content-wrap {
+  padding: 40px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+}
+
+.notice-board__content-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.notice-board__content-item:first-child {
+  padding-top: 0;
+}
+
+.notice-board__content-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.notice-board__content-date {
+  color: var(--gray-text);
 }
