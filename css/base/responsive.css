@@ -260,4 +260,9 @@
   .notice-board__content-wrap {
     padding: 25px 30px;
   }
+
+  /* faq */
+  .faq__content-wrap {
+    padding: 25px 30px;
+  }
 }
