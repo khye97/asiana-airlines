@@ -631,3 +631,41 @@ section {
 .notice-board__content-date {
   color: var(--gray-text);
 }
+
+/* faq --------------------------- */
+.faq .section-title-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq .section-title {
+  margin-bottom: 0;
+}
+
+.faq__content-wrap {
+  padding: 40px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+}
+
+.faq__content-item:first-child .faq__question {
+  padding-top: 0;
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.faq__question i {
+  color: var(--gray-text);
+  transition: all 200ms;
+}
+
+.faq__answer {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
