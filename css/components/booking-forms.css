@@ -307,6 +307,15 @@ select.fsw__tp-select-boarding-date {
   }
 
   /* 항공권 예매: tp-flight-booking */
+  .tp-flight-booking__round-trip .fsw__tp-date-group {
+    grid-column: span 4;
+  }
+
+  .tp-flight-booking__round-trip .passenger-count,
+  .tp-flight-booking__round-trip .seat-grade-option {
+    grid-column: span 2;
+  }
+
   .fsw__ctrl-group {
     gap: 15px;
   }
@@ -971,10 +980,15 @@ select.fsw__tp-select-boarding-date {
   border: 1px solid var(--border);
   height: 50px;
   font-size: var(--font-size-18);
+  color: var(--body-text);
 }
 
 .fsw-modal__seat-grade-btn-option.is-selected {
   border-color: var(--red);
+}
+
+.fsw-modal__seat-grade-btn-option:disabled {
+  pointer-events: none;
 }
 
 .fsw-modal__seat-grade-btn-option i {
