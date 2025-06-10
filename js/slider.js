@@ -1,3 +1,4 @@
+// swiper
 var swiper = new Swiper(".main-slider__slide-list", {
   pagination: {
     el: ".swiper-pagination",
