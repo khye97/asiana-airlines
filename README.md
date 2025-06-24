@@ -189,7 +189,7 @@ ASIANA-AIRLINES/
 │   │   ├── common.css      // 페이지 전반에 걸쳐 공통으로 사용되는 css 코드
 │   │   ├── reset.css
 │   │   ├── responsive.css  // 반응형 관련 코드
-│   │   ├── typograpy.css
+│   │   ├── typography.css
 │   │   └── variables.css
 │   ├── components/        // 페이지에서 재사용되는 UI 컴포넌트 코드 모음
 │   │   ├── booking-forms.css  // 항공권 예매 form에 관련된 코드
