@@ -21,7 +21,8 @@
 }
 
 @media screen and (max-width: 1024px) {
+  /* Header 높이만큼 margin-top 설정 */
   .main {
-    margin-top: 65px;
+    margin-top: 60px;
   }
 }
